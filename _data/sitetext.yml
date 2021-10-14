@@ -267,7 +267,7 @@ es: &DEFAULT_ES
             icon: fab fa-facebook-f
           - url: https://linkedin.com
             icon: fab fa-linkedin-in
-      - name: "Larry Parker"
+      - name: "Andrés G. Rodríguez"
         role: "Lead Marketer"
         image: assets/img/team/2.jpg
         social:
