@@ -170,8 +170,8 @@ en-AU:
 # -------
 es: &DEFAULT_ES
   header:
-    title: ¡Bienvenido a nuestro Estudio!
-    text: Es un placer conocerle
+    title: ¡Bienvenidos a ADB!
+    text: AGR DIGITALBUSSINES
     button: Ver más
     buttonlink: "#servicios"
 
@@ -181,10 +181,10 @@ es: &DEFAULT_ES
     section: servicios
     list:
       - title: "Comercio Electrónico"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+        desc: "En ADB encontras campañas publicitarias en facebook, instagram, linkedin. De igual manera contamos con portafolio de NFT's "
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Diseño Responsivo"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      - title: "Construcción"
+        desc: "Ofrecemos elaboracion de planos en Autocad - Civil 3d, mapas en ArcGIS, modelos Revit, transformación de puntos geodésicos con Magna-sirgas (GNSS)"
         icon: fas fa-laptop
       - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
         desc: "Su descripción aquí, soporte completo de **Markdown**"
@@ -290,7 +290,7 @@ es: &DEFAULT_ES
 
   contact:
     title: "Contáctenos"
-    text: "Lorem ipsum or call 123456789"
+    text: "302 4128452"
     section: contacto
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."
