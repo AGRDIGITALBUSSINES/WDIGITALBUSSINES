@@ -2,7 +2,7 @@
 caption: #what displays in the portfolio grid:
   title: Render Loft
   subtitle: NFT's - 3D modelo
-  thumbnail: ops_nft.jpg #https://place-hold.it/400x300
+  thumbnail: https://place-hold.it/ops_nft.jpg
 
 #what displays when the item is clicked:
 title: Render

@@ -22,7 +22,7 @@ description: "Site description"
 author     : Andrés G. Rodríguez
 logo:     #optional, defaults to site title
    path: assets\img\clients\creative2.jpg
-   height: 100 #height in px, defaults to 52px
+   height: 80 #height in px, defaults to 52px
 
 locale: "es-CO" # See available languages in _data/sitetext.yml
 
