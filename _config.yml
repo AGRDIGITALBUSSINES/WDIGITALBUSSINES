@@ -13,16 +13,16 @@
 
 theme: jekyll-agency
 
-url    : "" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
+url    : "https://bit.ly/AGRDIGITALBUSSINES" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "https://androdvlog.blogspot.com" # the subpath of your site, e.g. /blog
 
 title      : AGR DIGITALBUSSINES
 email      : agrdigitalbussines@gmail.com #this is also the email contact forms will go to
 description: "Site description"
 author     : Andrés G. Rodríguez
-logo:     #optional, defaults to site title
+logo: creative2.jpg    #optional, defaults to site title
    path: assets\img\clients\creative2.jpg
-   height: 60 #height in px, defaults to 52px
+   height: 95 #height in px, defaults to 52px
 
 locale: "es-CO" # See available languages in _data/sitetext.yml
 
