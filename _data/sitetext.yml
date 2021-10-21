@@ -252,7 +252,7 @@ es: &DEFAULT_ES
         logo: assets/img/clients/creative-market.jpg
 
   team:
-    #title: "NUESTRO INCREÍBLE EQUIPO"
+    title: "NUESTRO INCREÍBLE EQUIPO"
     #text: "Lorem ipsum dolor sit amet consectetur."
     #subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
     #section: equipo
@@ -268,13 +268,13 @@ es: &DEFAULT_ES
           #- url: https://linkedin.com
          #   icon: fab fa-linkedin-in
       - name: "Andrés G. Rodríguez"
-        role: "Lead Marketer"
+        role: "Lead & CEO"
         image: assets/img/team/2.jpg
         social:
           - url: https://twitter.com/agrdigitalbusns
             icon: fab fa-twitter
-          - url: androdvlog.blogspot.com 
-            icon: fab fa-blogger
+          - url: androdvlog.blogspot.com
+            icon: fab fa-blogger-b
           - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
    #   - name: "Diana Perterson"
