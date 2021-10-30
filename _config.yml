@@ -11,10 +11,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-- theme: jekyll-agency
+theme: jekyll-agency
 
 url    : "https://bit.ly/AGRDIGITALBUSSINES" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "https://androdvlog.blogspot.com" # the subpath of your site, e.g. /blog
+baseurl: "https://bit.ly/androd_vblog" # the subpath of your site, e.g. /blog
 
 title      : AGR DIGITALBUSSINES
 email      : agrdigitalbussines@gmail.com #this is also the email contact forms will go to
