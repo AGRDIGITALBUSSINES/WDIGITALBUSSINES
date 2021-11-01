@@ -50,8 +50,7 @@ es: &DEFAULT_ES
       section: equipo
     - title: "Contáctenos"
       section: contacto
-    - title: "Fuente de la plantilla"
-      url: https://github.com/raviriley/agency-jekyll-theme/
+
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
