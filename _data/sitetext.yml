@@ -170,18 +170,18 @@ en-AU:
 # -------
 es: &DEFAULT_ES
   header:
-    title: ¡Bienvenido a nuestro Estudio!
-    text: Es un placer conocerle
+    title: ¡Bienvenido a AGR!
+    text: DIGITALBUSSINES
     button: Ver más
     buttonlink: "#servicios"
 
   services:
     title: "Servicios"
-    text: "Lorem ipsum"
+    text: "MARKETPLACE Architecrture | Marketing & digital new's | #NFT's & #crypto | 3DModel | Illustrations | Civil Construccion |.dwg"
     section: servicios
     list:
       - title: "Comercio Electrónico"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+        desc: "En AGR DIGITALBUSSINES encontraras nuestra galeria de NFT'S & marketing digital"
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
       - title: "Diseño Responsivo"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
@@ -198,23 +198,23 @@ es: &DEFAULT_ES
 
   timeline:
     title: "Cronología"
-    text: "Lorem ipsum timeline"
+    text: "Conocenos"
     section: cronologia
     # left is the default
     #start_align: "left"
     events:
       - title: "Nuestro Humilde Comienzo"
-        year: "2009-2011"
+        year: "2012"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
         image: assets/img/timeline/1.jpg
         alt:
       - title: "Una Agencia nace"
-        year: "March 2011"
+        year: "2014"
         desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
         image: assets/img/timeline/2.jpg
         alt:
       - title: "La plantilla Jekyll es creada"
-        year: "2019"
+        year: "2020"
         desc: "Ravi Riley convirtió Agency, una plantilla basada en Bootstrap, en una plantilla de Jekyll. La plantilla Jekyll puede ser instalada commo una gema de Ruby (Ruby gem) o remotamente. Para más información, visite la documentación."
         image: assets/img/timeline/3.jpg
         alt: image alt text
@@ -267,15 +267,15 @@ es: &DEFAULT_ES
             icon: fab fa-facebook-f
           - url: https://linkedin.com
             icon: fab fa-linkedin-in
-      - name: "Larry Parker"
-        role: "Lead Marketer"
+      - name: "Andrés Rodríguez"
+        role: "Founder & CEO"
         image: assets/img/team/2.jpg
         social:
-          - url: https://twitter.com
+          - url: https://twitter.com/AGRDIGITALBUSNS
             icon: fab fa-twitter
-          - url: https://facebook.com
+          - url: https://www.facebook.com/profile.php?id=800804465
             icon: fab fa-facebook-f
-          - url: https://linkedin.com
+          - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
       - name: "Diana Perterson"
         role: "Lead Developer"
@@ -290,7 +290,7 @@ es: &DEFAULT_ES
 
   contact:
     title: "Contáctenos"
-    text: "Lorem ipsum or call 123456789"
+    text: "agrdigitalbussines@gmail.com | 601-7158621"
     section: contacto
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."
@@ -306,15 +306,15 @@ es: &DEFAULT_ES
   footer:
     legal: "Política de Privacidad"
     social:
-      - url: https://twitter.com
+      - url: https://twitter.com/AGRDIGITALBUSNS
         icon: "fab fa-twitter"
-      - url: https://facebook.com
+      - url: https://www.facebook.com/profile.php?id=800804465
         icon: "fab fa-facebook-f"
-      - url: https://linkedin.com
+      - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
       - url: https://github.com/raviriley/agency-jekyll-theme
         icon: "fab fa-github"
-      - url: https://instagram.com
+      - url: https://www.instagram.com/androd_747/
         icon: "fab fa-instagram"
 es-ES:
   <<: *DEFAULT_ES
