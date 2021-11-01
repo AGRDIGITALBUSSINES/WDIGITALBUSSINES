@@ -2,8 +2,8 @@ url: https://y7kim.github.io
 baseurl: /agency-jekyll-theme/
 
 # Site settings
-title: Awesome Title
-email: your-email@domain.com
+title: AGR DIGITALBUSSINES
+email: agrdigitalbussines@gmail.com
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 
 
@@ -20,16 +20,16 @@ people:
     - title: stack-overflow
       url: #
 
-- name: Larry Parker
+- name: Andrés Rodríguez
   pic: 2
-  position: Lead Marketer
+  position: Founder and CEO
   social:
     - title: twitter
-      url: #
-    - title: facebook
-      url: #
+      url: https://twitter.com/AGRDIGITALBUSNS
+    - title: blogger
+      url: https://bit.ly/androd_vblog
     - title: linkedin
-      url: #
+      url: https://www.linkedin.com/in/andresgrodriguez/
 
 - name: Diana Petersen
   pic: 3
@@ -45,15 +45,15 @@ people:
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
-    url: http://twitter.com/jekyllrb
+    url: https://twitter.com/AGRDIGITALBUSNS
+  - title: Blogger
+    url: https://bit.ly/androd_vblog
   - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
+    url: https://www.facebook.com/profile.php?id=800804465
+  - title: linkedin 
+    url: https://www.linkedin.com/in/andresgrodriguez/
   - title: github
-    url: http://github.com/jekyll
+    url: https://github.com/AGRDIGITALBUSSINES
 
 # Postal address (add as many lines as necessary)
 address:
