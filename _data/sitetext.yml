@@ -177,14 +177,14 @@ es: &DEFAULT_ES
 
   services:
     title: "Servicios"
-    text: "MARKETPLACE Architecrture | Marketing & digital new's | #NFT's & #crypto | 3DModel | Illustrations | Civil Construccion |.dwg"
+    text: "Marketplace Architecture | Marketing & digital new's | NFT's | ArcMAPS | 3DModel | Renders | Civil Construccion |.dwg | .rvt"
     section: servicios
     list:
-      - title: "Comercio Electrónico"
-        desc: "En AGR DIGITALBUSSINES encontraras nuestra galeria de NFT'S & marketing digital"
+      - title: "E-commerce"
+        desc: "Este es nuestro lado comercial, nuesrta store de NFT's https://www.instagram.com/agrdigitalsotre/ & marketing digital."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Diseño Responsivo"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit."
+      - title: "Arquitectura e Ingemiería"
+        desc: "Servicio en el cual se elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)"
         icon: fas fa-laptop
       - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
         desc: "Su descripción aquí, soporte completo de **Markdown**"
@@ -254,19 +254,10 @@ es: &DEFAULT_ES
   team:
     title: "NUESTRO INCREÍBLE EQUIPO"
     text: "Lorem ipsum dolor sit amet consectetur."
-    subtext: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported.
+    subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería.
     section: equipo
     people:
-      - name: "Kay Garland"
-        role: "Lead Designer"
-        image: assets/img/team/500x500.jpg
-        social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
+
       - name: "Andrés Rodríguez"
         role: "Founder & CEO"
         image: assets/img/team/2.jpg
@@ -277,16 +268,8 @@ es: &DEFAULT_ES
             icon: fab fa-facebook-f
           - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
-      - name: "Diana Perterson"
-        role: "Lead Developer"
-        image: assets/img/team/500x500.jpg
-        social:
-          - url: https://twitter.com
-            icon: fab fa-twitter
-          - url: https://facebook.com
-            icon: fab fa-facebook-f
-          - url: https://linkedin.com
-            icon: fab fa-linkedin-in
+          - url: https://androdvlog.blogspot.com
+            icon: fab fa-blogger-b    
 
   contact:
     title: "Contáctenos"
