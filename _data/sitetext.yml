@@ -177,13 +177,13 @@ es: &DEFAULT_ES
 
   services:
     title: "Servicios"
-    text: "Marketplace Architecture | Marketing & digital new's | NFT's | ArcMAPS | 3DModel | Renders | Civil Construccion |.dwg | .rvt"
+    text: "Marketplace Architecture | Marketing digital | NFT's | ArcMAPS | 3DModel | Renders | .rvt | Civil Construction |.dwg "
     section: servicios
     list:
       - title: "E-commerce"
-        desc: "Este es nuestro lado comercial, nuesrta store de NFT's https://www.instagram.com/agrdigitalsotre/ & marketing digital."
+        desc: "Este es nuestro lado comercial, nuesrta store de NFT's @agrdigitalstore en Instagram, marketing digital de afiliados."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Arquitectura e Ingemiería"
+      - title: "Arquitectura e Ingeniería"
         desc: "Servicio en el cual se elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)"
         icon: fas fa-laptop
       - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
