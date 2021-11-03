@@ -213,14 +213,14 @@ es: &DEFAULT_ES
         desc: "Materializamos el sueño, tomando capacitaciones, tallerres, cursos y diplomados"
         image: assets/img/timeline/2.jpg
         alt:
-      - title: "La plantilla Jekyll es creada"
+      - title: "Conectamos con el mundo"
         year: "2020"
         desc: "Dentro de los mercados emergentes se crea la huella digital de ARG DIGITALBUSSINES para dar a conocer nuestros servicios al publico."
         image: assets/img/timeline/3.jpg
         alt: image alt text
-      - title: "Título"
+      - title: "Legado"
         year: "2009-2011"
-        desc: "Trabajar por un legado positivo en el mundo"
+        desc: "Trabajar por un legado que impacte de manera positiva en el mundo."
         image: assets/img/timeline/4.jpg
         alt:
         # you can enforce the alignment
@@ -230,7 +230,7 @@ es: &DEFAULT_ES
   about:
     title: "Sobre nosotros"
     text: "nuestra historia"
-    body: "Somos un empresa que aporta valor al trabajo de las personas."
+    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas."
     section: nosotros
 
   clients:
@@ -296,7 +296,7 @@ es: &DEFAULT_ES
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
       - url: https://linktr.ee/AGRDIGITALBUSSINES
-        icon: "fab fa-linktr"
+        icon: "fab fa-link"
       - url: https://www.instagram.com/androd_747/
         icon: "fab fa-instagram"
 es-ES:
