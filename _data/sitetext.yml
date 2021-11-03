@@ -177,14 +177,14 @@ es: &DEFAULT_ES
 
   services:
     title: "Servicios"
-    text: "Marketplace Architecture | Marketing digital | NFT's | ArcMAPS | 3DModel | Renders | .rvt | Civil Construction |.dwg "
+    text: "Marketplace | Architecture | Marketing digital | NFT's | ArcMAPS | 3DModel | Renders | .rvt | Civil Construction |.dwg "
     section: servicios
     list:
       - title: "E-commerce"
         desc: "Este es nuestro lado comercial, nuesrta store de NFT's @agrdigitalstore en Instagram, marketing digital de afiliados."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
       - title: "Arquitectura e Ingeniería"
-        desc: "Servicio en el cual se elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)"
+        desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)."
         icon: fas fa-laptop
       - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
         desc: "Su descripción aquí, soporte completo de **Markdown**"
@@ -192,7 +192,7 @@ es: &DEFAULT_ES
 
   portfolio:
     title: "Portafolio"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    text: "NUESTRA GALERIA."
     section: portafolio
     closebutton: "Cerrar Proyecto"
 
@@ -205,22 +205,22 @@ es: &DEFAULT_ES
     events:
       - title: "Nuestro Humilde Comienzo"
         year: "2012"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+        desc: "Nace como propuesta en un conversatorio, sobre como poder impactar positivamente la cultura."
         image: assets/img/timeline/1.jpg
         alt:
       - title: "Una Agencia nace"
         year: "2014"
-        desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+        desc: "Materializamos el sueño, tomando capacitaciones, tallerres, cursos y diplomados"
         image: assets/img/timeline/2.jpg
         alt:
       - title: "La plantilla Jekyll es creada"
         year: "2020"
-        desc: "Ravi Riley convirtió Agency, una plantilla basada en Bootstrap, en una plantilla de Jekyll. La plantilla Jekyll puede ser instalada commo una gema de Ruby (Ruby gem) o remotamente. Para más información, visite la documentación."
+        desc: "Dentro de los mercados emergentes se crea la huella digital de ARG DIGITALBUSSINES para dar a conocer nuestros servicios al publico."
         image: assets/img/timeline/3.jpg
         alt: image alt text
       - title: "Título"
         year: "2009-2011"
-        desc: "Su descripción aquí, **Markdown** es soportado completamente."
+        desc: "Trabajar por un legado positivo en el mundo"
         image: assets/img/timeline/4.jpg
         alt:
         # you can enforce the alignment
@@ -230,7 +230,7 @@ es: &DEFAULT_ES
   about:
     title: "Sobre nosotros"
     text: "nuestra historia"
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+    body: "Somos un empresa que aporta valor al trabajo de las personas."
     section: nosotros
 
   clients:
@@ -253,7 +253,7 @@ es: &DEFAULT_ES
 
   team:
     title: "NUESTRO INCREÍBLE EQUIPO"
-    text: "Lorem ipsum dolor sit amet consectetur."
+    text: "Nos plus ultra"
     subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería.
     section: equipo
     people:
@@ -264,7 +264,7 @@ es: &DEFAULT_ES
         social:
           - url: https://twitter.com/AGRDIGITALBUSNS
             icon: fab fa-twitter
-          - url: https://www.facebook.com/profile.php?id=800804465
+          - url: https://www.facebook.com/AGR-Digitalbussines-107553495062392/
             icon: fab fa-facebook-f
           - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
@@ -273,7 +273,7 @@ es: &DEFAULT_ES
 
   contact:
     title: "Contáctenos"
-    text: "agrdigitalbussines@gmail.com | 601-7158621"
+    text: "agrdigitalbussines@gmail.com | 302-4128452"
     section: contacto
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."
@@ -295,8 +295,8 @@ es: &DEFAULT_ES
         icon: "fab fa-facebook-f"
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
-      - url: https://github.com/raviriley/agency-jekyll-theme
-        icon: "fab fa-github"
+      - url: https://linktr.ee/AGRDIGITALBUSSINES
+        icon: "fab fa-linktr"
       - url: https://www.instagram.com/androd_747/
         icon: "fab fa-instagram"
 es-ES:
