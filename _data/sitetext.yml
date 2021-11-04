@@ -296,7 +296,7 @@ es: &DEFAULT_ES
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
       - url: https://linktr.ee/AGRDIGITALBUSSINES
-        icon: "fab fa-link"
+        icon: "fab fa-usb"
       - url: https://www.instagram.com/androd_747/
         icon: "fab fa-instagram"
 es-ES:
