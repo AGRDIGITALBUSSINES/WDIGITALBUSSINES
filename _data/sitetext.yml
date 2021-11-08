@@ -186,9 +186,9 @@ es: &DEFAULT_ES
       - title: "Arquitectura e Ingeniería"
         desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)."
         icon: fas fa-laptop
-      - title: "[Markdown](https://en.wikipedia.org/wiki/Markdown)"
-        desc: "Su descripción aquí, soporte completo de **Markdown**"
-        icon: fab fa-markdown
+      - title: "Modelado"
+        desc: "Elaboración de render y modelados 3D"
+        icon: fab fa-centos
 
   portfolio:
     title: "Portafolio"
@@ -264,7 +264,7 @@ es: &DEFAULT_ES
         social:
           - url: https://twitter.com/AGRDIGITALBUSNS
             icon: fab fa-twitter
-          - url: https://www.facebook.com/AGR-Digitalbussines-107553495062392/
+          - url: https://bit.ly/AGR-Digitalbussines
             icon: fab fa-facebook-f
           - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
@@ -291,13 +291,13 @@ es: &DEFAULT_ES
     social:
       - url: https://twitter.com/AGRDIGITALBUSNS
         icon: "fab fa-twitter"
-      - url: https://www.facebook.com/profile.php?id=800804465
+      - url: https://bit.ly/AGR-Digitalbussines
         icon: "fab fa-facebook-f"
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
       - url: https://linktr.ee/AGRDIGITALBUSSINES
         icon: "fab fa-usb"
-      - url: https://www.instagram.com/androd_747/
+      - url: https://www.instagram.com/agrdigitalstore/
         icon: "fab fa-instagram"
 es-ES:
   <<: *DEFAULT_ES
