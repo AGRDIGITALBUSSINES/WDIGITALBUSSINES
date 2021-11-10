@@ -177,7 +177,7 @@ es: &DEFAULT_ES
 
   services:
     title: "Servicios"
-    text: "Marketplace | Architecture | Marketing digital | NFT's | ArcMAPS | 3DModel | Renders | Revit | Civil Construction |.dwg "
+    text: " Architecture | Marketing digital | NFT's Gallery | ArcMAPS | 3DModel | Renders | Revit | Civil Construction | AutoCAD "
     section: servicios
     list:
       - title: "E-commerce"
@@ -186,8 +186,8 @@ es: &DEFAULT_ES
       - title: "Arquitectura e Ingeniería"
         desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)."
         icon: fas fa-laptop
-      - title: "Modelados"
-        desc: "Elaboración de render y modelados 3D, automatización de procesos por medio de Macros, Dynamo Pyautocad (Python) "
+      - title: "Automatización & 3D Models"
+        desc: "Elaboración de render y modelados 3D, automatización de procesos por medio de Macros, Dynamo, Pyautocad (Python) "
         icon: fas fa-bowling-ball
 
   portfolio:
@@ -269,7 +269,7 @@ es: &DEFAULT_ES
           - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
           - url: https://androdvlog.blogspot.com
-            icon: fab fa-blogger-b    
+            icon: fab fa-blogger-b
 
   contact:
     title: "Contáctenos"
