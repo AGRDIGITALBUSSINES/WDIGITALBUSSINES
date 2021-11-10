@@ -188,7 +188,7 @@ es: &DEFAULT_ES
         icon: fas fa-laptop
       - title: "Modelados"
         desc: "Elaboración de render y modelados 3D, automatización de procesos por medio de Macros, Dynamo Pyautocad (Python) "
-        icon: fab fa-bahai
+        icon: fas fa-bahai
 
   portfolio:
     title: "Portafolio"
