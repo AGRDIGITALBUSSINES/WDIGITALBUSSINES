@@ -188,7 +188,7 @@ es: &DEFAULT_ES
         icon: fas fa-laptop
       - title: "Modelados"
         desc: "Elaboración de render y modelados 3D, automatización de procesos por medio de Macros, Dynamo Pyautocad (Python) "
-        icon: fas fa-bahai
+        icon: fab fa-battle-net
 
   portfolio:
     title: "Portafolio"
@@ -296,7 +296,7 @@ es: &DEFAULT_ES
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
       - url: https://bit.ly/AGR-DIGITALBUSSINES
-        icon: "fab fa-battle-net"
+        icon: "fab fa-angrycreative"
       - url: https://www.instagram.com/agrdigitalstore/
         icon: "fab fa-instagram"
 es-ES:
