@@ -186,9 +186,9 @@ es: &DEFAULT_ES
       - title: "Arquitectura e Ingeniería"
         desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)."
         icon: fas fa-laptop
-      - title: "Modelado"
-        desc: "Elaboración de render y modelados 3D"
-        icon: fab fa-centos
+      - title: "Modelados"
+        desc: "Elaboración de render y modelados 3D, automatización de procesos por medio de Macros, Dynamo Pyautocad (Python) "
+        icon: fas fa-odnoklassniki
 
   portfolio:
     title: "Portafolio"
@@ -296,7 +296,7 @@ es: &DEFAULT_ES
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
       - url: https://bit.ly/AGR-DIGITALBUSSINES
-        icon: "fab fa-usb"
+        icon: "fab fa-share-alt"
       - url: https://www.instagram.com/agrdigitalstore/
         icon: "fab fa-instagram"
 es-ES:
