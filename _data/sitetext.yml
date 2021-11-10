@@ -177,7 +177,7 @@ es: &DEFAULT_ES
 
   services:
     title: "Servicios"
-    text: "Marketplace | Architecture | Marketing digital | NFT's | ArcMAPS | 3DModel | Renders | .rvt | Civil Construction |.dwg "
+    text: "Marketplace | Architecture | Marketing digital | NFT's | ArcMAPS | 3DModel | Renders | Revit | Civil Construction |.dwg "
     section: servicios
     list:
       - title: "E-commerce"
@@ -205,22 +205,22 @@ es: &DEFAULT_ES
     events:
       - title: "Nuestro Humilde Comienzo"
         year: "2012"
-        desc: "Nace como propuesta en un conversatorio, sobre como poder impactar positivamente la cultura."
+        desc: "Nace como propuesta en un conversatorio en la ciudad de la La Plata en Argentina, sobre como poder impactar positivamente la cultura."
         image: assets/img/timeline/1.jpg
         alt:
       - title: "Una Agencia nace"
         year: "2014"
-        desc: "Materializamos el sueño, tomando capacitaciones, tallerres, cursos y diplomados"
+        desc: "Materializamos el sueño, tomando capacitaciones, tallerres, cursos y diplomados enfocados en cada una de las areas y servicios ofrecidos"
         image: assets/img/timeline/2.jpg
         alt:
       - title: "Conectamos con el mundo"
         year: "2020"
-        desc: "Dentro de los mercados emergentes se crea la huella digital de ARG DIGITALBUSSINES para dar a conocer nuestros servicios al publico."
+        desc: "Dentro de los mercados emergentes se crea la huella digital de ARG DIGITALBUSSINES para dar a conocer nuestros servicios al publico e impactar de manera positiva el mundo."
         image: assets/img/timeline/3.jpg
         alt: image alt text
       - title: "Legado"
         year: "2009-2011"
-        desc: "Trabajar por un legado que impacte de manera positiva en el mundo."
+        desc: "Trabajar por un legado que impacte de manera positiva y transforme el mundo."
         image: assets/img/timeline/4.jpg
         alt:
         # you can enforce the alignment
@@ -254,7 +254,7 @@ es: &DEFAULT_ES
   team:
     title: "NUESTRO INCREÍBLE EQUIPO"
     text: "Nos plus ultra"
-    subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería.
+    subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería.| Graphic developer of Architecture and Engineering projects.
     section: equipo
     people:
 
@@ -295,7 +295,7 @@ es: &DEFAULT_ES
         icon: "fab fa-facebook-f"
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
-      - url: https://linktr.ee/AGRDIGITALBUSSINES
+      - url: https://bit.ly/AGR-DIGITALBUSSINES
         icon: "fab fa-usb"
       - url: https://www.instagram.com/agrdigitalstore/
         icon: "fab fa-instagram"
