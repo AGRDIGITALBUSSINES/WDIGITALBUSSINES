@@ -254,7 +254,7 @@ es: &DEFAULT_ES
   team:
     title: "NUESTRO INCREÍBLE EQUIPO"
     text: "Nos plus ultra"
-    subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería.| Graphic developer of Architecture and Engineering projects.
+    subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería. <br> Graphic developer of Architecture and Engineering projects.
     section: equipo
     people:
 
