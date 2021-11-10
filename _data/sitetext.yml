@@ -181,13 +181,13 @@ es: &DEFAULT_ES
     section: servicios
     list:
       - title: "E-commerce"
-        desc: "Este es nuestro lado comercial, nuesrta store de NFT's @agrdigitalstore en Instagram, marketing digital de afiliados."
+        desc: "Este es nuestro lado comercial, nuesrta galeria de NFT's en Opensea, Instagram y otras plataformas digitales, marketing digital (pixel)."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "Arquitectura e Ingeniería"
-        desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)."
+      - title: "ARCHITECTURE & ENGINEERING"
+        desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, QGIS, Magna-Sirgas(GNSS)."
         icon: fas fa-laptop
-      - title: "Automatización & 3D Models"
-        desc: "Elaboración de render y modelados 3D, automatización de procesos por medio de Macros, Dynamo, Pyautocad (Python) "
+      - title: "3DMODELS & CODE"
+        desc: "Elaboración de renders y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad (Python). "
         icon: fas fa-bowling-ball
 
   portfolio:
@@ -262,10 +262,9 @@ es: &DEFAULT_ES
         role: "Founder & CEO"
         image: assets/img/team/2.jpg
         social:
-          - url: https://twitter.com/AGRDIGITALBUSNS
-            icon: fab fa-twitter
-          - url: https://bit.ly/AGR-Digitalbussines
-            icon: fab fa-facebook-f
+
+          - url: https://bit.ly/AGRNFT-GALLERY
+            icon: fab fa-grav
           - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
           - url: https://androdvlog.blogspot.com
@@ -289,16 +288,16 @@ es: &DEFAULT_ES
   footer:
     legal: "Política de Privacidad"
     social:
+        - url: https://www.instagram.com/agrdigitalstore/
+        icon: "fab fa-instagram"
+        - url: https://bit.ly/AGR-Digitalbussines
+        icon: "fab fa-facebook-f"
       - url: https://twitter.com/AGRDIGITALBUSNS
         icon: "fab fa-twitter"
-      - url: https://bit.ly/AGR-Digitalbussines
-        icon: "fab fa-facebook-f"
+        - url: https://bit.ly/AGR-DIGITALBUSSINES
+        icon: "fas fa-broadcast-tower"
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
-      - url: https://bit.ly/AGR-DIGITALBUSSINES
-        icon: "fas fa-broadcast-tower"
-      - url: https://www.instagram.com/agrdigitalstore/
-        icon: "fab fa-instagram"
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
