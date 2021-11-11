@@ -261,7 +261,7 @@ es: &DEFAULT_ES
         role: "Founder & CEO"
         image: assets/img/team/2.jpg
         social:
-          - url: https://bit.ly/AGRNFT-GALLERY
+          - url: https://sites.google.com/view/agrdigitalbussines/gallery
             icon: fab fa-grav
           - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
