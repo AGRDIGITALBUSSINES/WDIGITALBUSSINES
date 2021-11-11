@@ -180,13 +180,13 @@ es: &DEFAULT_ES
     text: " Architecture | Marketing digital | NFT's Gallery | ArcMAPS | 3DModel | Renders | Revit | Civil Construction | AutoCAD "
     section: servicios
     list:
-      - title: "E-commerce"
+      - title: "E-COMMERCE"
         desc: "Este es nuestro lado comercial, nuesrta galeria de NFT's en Opensea, Instagram y otras plataformas digitales, marketing digital (pixel)."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
-      - title: "ARCHITECTURE & ENGINEERING"
+      - title: "ARQUITECTURA & INGENIERÍA"
         desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, QGIS, Magna-Sirgas(GNSS)."
         icon: fas fa-laptop
-      - title: "3DMODELS & CODE"
+      - title: "MODELADO & CODIGO"
         desc: "Elaboración de renders y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad (Python). "
         icon: fas fa-bowling-ball
 
