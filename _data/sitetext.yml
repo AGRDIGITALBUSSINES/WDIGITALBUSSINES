@@ -257,12 +257,10 @@ es: &DEFAULT_ES
     subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería. <br> Graphic developer of Architecture and Engineering projects.
     section: equipo
     people:
-
       - name: "Andrés Rodríguez"
         role: "Founder & CEO"
         image: assets/img/team/2.jpg
         social:
-
           - url: https://bit.ly/AGRNFT-GALLERY
             icon: fab fa-grav
           - url: https://www.linkedin.com/in/andresgrodriguez/
@@ -288,13 +286,13 @@ es: &DEFAULT_ES
   footer:
     legal: "Política de Privacidad"
     social:
-        - url: https://www.instagram.com/agrdigitalstore/
+      - url: https://www.instagram.com/agrdigitalstore/
         icon: "fab fa-instagram"
-        - url: https://bit.ly/AGR-Digitalbussines
+      - url: https://bit.ly/AGR-Digitalbussines
         icon: "fab fa-facebook-f"
       - url: https://twitter.com/AGRDIGITALBUSNS
         icon: "fab fa-twitter"
-        - url: https://bit.ly/AGR-DIGITALBUSSINES
+      - url: https://bit.ly/AGR-DIGITALBUSSINES
         icon: "fas fa-broadcast-tower"
       - url: https://www.linkedin.com/in/andresgrodriguez/
         icon: "fab fa-linkedin-in"
