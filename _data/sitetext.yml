@@ -230,7 +230,7 @@ es: &DEFAULT_ES
   about:
     title: "Sobre nosotros"
     text: "nuestra historia"
-    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas. Soy desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, BIM[Revit], ArcGIS, 3D Studio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]. Manejo de repositorios con Git - Github. <br> Dentro de los mercados emergentes nace nuestra galeria de crypto-arte, la cual esta enfocada al artista poco conocido, pero de gran talento, que junto a blockchain hacen de esta galeria posible." 
+    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas. Soy desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, Revit, ArcGIS, 3DStudio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]. Manejo de repositorios con Git - Github.<br>Dentro de los mercados emergentes nace nuestra galeria de crypto-arte, la cual esta enfocada al artista poco conocido, pero de gran talento, que junto a blockchain hacen de esta galeria posible." 
     section: nosotros
 
   clients:
