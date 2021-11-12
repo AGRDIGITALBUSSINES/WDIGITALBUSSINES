@@ -270,7 +270,6 @@ es: &DEFAULT_ES
 
   contact:
     title: "Contáctenos"
-    text: "Visita nuestra crypto galeria.<br>Visita nuestas redes sociales."
     section: contacto
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."
@@ -282,6 +281,7 @@ es: &DEFAULT_ES
     message-validation: "Por favor escriba un mensaje."
     subject: "Envío del formulario de contacto"
     submit: "Enviar Mensaje"
+    text: "Visita nuestra crypto galeria.<br>Visita nuestas redes sociales."
 
   footer:
     legal: "Política de Privacidad"
