@@ -181,13 +181,13 @@ es: &DEFAULT_ES
     section: servicios
     list:
       - title: "E-COMMERCE"
-        desc: "Este es nuestro lado comercial, nuesrta galeria de NFT's en Opensea, Instagram y otras plataformas digitales, marketing digital (pixel)."
+        desc: "Este es nuestro lado comercial, ofrecemos una ventana con nuestra galeria de NFT's en Opensea, Meta y otras plataformas digitales, impulsamos propuestas con nuestro marketing digital (pixel)."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
       - title: "INGENIERÍA & ARQUITECTURA"
-        desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3d, Revit. Manejamos herramientas SIG como ArcGIS, QGIS, Magna-Sirgas(GNSS)."
+        desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3D, Revit. Manejamos herramientas SIG como ArcGIS, QGIS, Magna-Sirgas(GNSS). "
         icon: fas fa-laptop
       - title: "MODELADO & CODIGO"
-        desc: "Elaboración de renders y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad (Python). "
+        desc: "Elaboración de modelados en 3D studio max y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad (Python). "
         icon: fas fa-bowling-ball
 
   portfolio:
@@ -203,7 +203,7 @@ es: &DEFAULT_ES
     # left is the default
     #start_align: "left"
     events:
-      - title: "Nuestro Humilde Comienzo"
+      - title: "Nuestro Comienzo"
         year: "2012"
         desc: "Nace como propuesta en un conversatorio en la ciudad de la La Plata en Argentina, sobre como poder impactar positivamente la cultura."
         image: assets/img/timeline/1.jpg
@@ -230,7 +230,7 @@ es: &DEFAULT_ES
   about:
     title: "Sobre nosotros"
     text: "nuestra historia"
-    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas."
+    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas. Desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, BIM [Revit], ArcGIS, 3D Studio Max [VRAY],  Office, Magna-Sirgas [GNSS],  VBA, Dynamo [Python]. Manejo de repositorios con Git - Github."
     section: nosotros
 
   clients:
@@ -253,7 +253,7 @@ es: &DEFAULT_ES
 
   team:
     title: "NUESTRO INCREÍBLE EQUIPO"
-    text: "Nos plus ultra"
+    text: ""
     subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería. <br> Graphic developer of Architecture and Engineering projects.
     section: equipo
     people:
@@ -270,7 +270,7 @@ es: &DEFAULT_ES
 
   contact:
     title: "Contáctenos"
-    text: "agrdigitalbussines@gmail.com | Redes Sociales."
+    text: "Visita nuestra crypto galeria. | Visita nuestas redes sociales."
     section: contacto
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."
@@ -286,16 +286,16 @@ es: &DEFAULT_ES
   footer:
     legal: "Política de Privacidad"
     social:
+      - url: https://sites.google.com/view/agrdigitalbussines/gallery
+        icon: "fab fa-grav"
       - url: https://www.instagram.com/agrdigitalstore/
         icon: "fab fa-instagram"
       - url: https://bit.ly/AGR-Digitalbussines
         icon: "fab fa-facebook-f"
-      - url: https://twitter.com/AGRDIGITALBUSNS
+      - url: https://twitter.com/AGRDIGITALBUSNS 
         icon: "fab fa-twitter"
       - url: https://bit.ly/AGR-DIGITALBUSSINES
         icon: "fas fa-broadcast-tower"
-      - url: https://www.linkedin.com/in/andresgrodriguez/
-        icon: "fab fa-linkedin-in"
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
