@@ -177,17 +177,17 @@ es: &DEFAULT_ES
 
   services:
     title: "Servicios"
-    text: " Architecture | Marketing digital | NFT's Gallery | ArcMAPS | 3DModel | Renders | Revit | Civil Construction | AutoCAD "
+    text: " Architecture | Engineering | Marketing digital | NFT's Gallery | ArcMAPS | 3DModel | C3D | Revit | AutoCAD "
     section: servicios
     list:
       - title: "E-COMMERCE"
-        desc: "Este es nuestro lado comercial, ofrecemos una ventana con nuestra galeria de NFT's en Opensea, Meta y otras plataformas digitales, impulsamos propuestas con nuestro marketing digital (pixel)."
+        desc: "Ofrecemos una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulsamos sus propuestas con nuestro marketing digital y sus diferentes campañas."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
       - title: "INGENIERÍA & ARQUITECTURA"
         desc: "Servicio en el cual elaboramos planos en AutoCAD, Civil 3D, Revit. Manejamos herramientas SIG como ArcGIS, QGIS, Magna-Sirgas(GNSS). "
         icon: fas fa-laptop
       - title: "MODELADO & CODIGO"
-        desc: "Elaboración de modelados en 3D studio max y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad (Python). "
+        desc: "Elaboración de modelados en 3D Studio max y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad(Python). "
         icon: fas fa-bowling-ball
 
   portfolio:
@@ -270,7 +270,7 @@ es: &DEFAULT_ES
 
   contact:
     title: "Contáctenos"
-    text: "Visita nuestra crypto galeria. | Visita nuestas redes sociales."
+    text: "Visita nuestra crypto galeria.<br>Visita nuestas redes sociales."
     section: contacto
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."
@@ -288,12 +288,6 @@ es: &DEFAULT_ES
     social:
       - url: https://sites.google.com/view/agrdigitalbussines/gallery
         icon: "fab fa-grav"
-      - url: https://www.instagram.com/agrdigitalstore/
-        icon: "fab fa-instagram"
-      - url: https://bit.ly/AGR-Digitalbussines
-        icon: "fab fa-facebook-f"
-      - url: https://twitter.com/AGRDIGITALBUSNS 
-        icon: "fab fa-twitter"
       - url: https://bit.ly/AGR-DIGITALBUSSINES
         icon: "fas fa-broadcast-tower"
 es-ES:
