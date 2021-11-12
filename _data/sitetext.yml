@@ -171,7 +171,7 @@ en-AU:
 es: &DEFAULT_ES
   header:
     title: ¡Bienvenido a AGR!
-    text: DIGITALBUSSINES
+    text: DIGITAL<br>BUSSINES
     button: Ver más
     buttonlink: "#servicios"
 
