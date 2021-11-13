@@ -262,7 +262,7 @@ es: &DEFAULT_ES
         image: assets/img/team/2.jpg
         social:
           - url: https://sites.google.com/view/agrdigitalbussines/gallery
-            icon: fab fa-grav
+            icon: fas fa-user-astronaut
           - url: https://www.linkedin.com/in/andresgrodriguez/
             icon: fab fa-linkedin-in
           - url: https://androdvlog.blogspot.com
@@ -287,7 +287,7 @@ es: &DEFAULT_ES
     legal: "Política de Privacidad"
     social:
       - url: https://sites.google.com/view/agrdigitalbussines/gallery
-        icon: "fab fa-grav"
+        icon: "fas fa-user-astronaut"
       - url: https://bit.ly/AGR-DIGITALBUSSINES
         icon: "fas fa-share-alt"
 es-ES:
