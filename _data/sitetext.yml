@@ -181,13 +181,13 @@ es: &DEFAULT_ES
     section: servicios
     list:
       - title: "E-COMMERCE"
-        desc: "Ofrecemos una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulsamos sus propuestas con nuestro marketing digital y sus diferentes campañas."
+        desc: "Ofrecemos una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulsamos sus propuestas con nuestro marketing digital en nuestras diferentes campañas."
         icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
       - title: "INGENIERÍA & ARQUITECTURA"
         desc: Elaboramos planos en AutoCAD, Civil 3D, modelos en Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS)."
         icon: fas fa-laptop
       - title: "MODELADO & CODIGO"
-        desc: "Elaboración de modelados en 3D Studio max y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad(Python). "
+        desc: "Elaboramos modelados en 3D Studio max y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad(Python). "
         icon: fas fa-bowling-ball
 
   portfolio:
@@ -263,10 +263,10 @@ es: &DEFAULT_ES
         social:
           - url: https://sites.google.com/view/agrdigitalbussines/gallery
             icon: fas fa-user-astronaut
-          - url: https://www.linkedin.com/in/andresgrodriguez/
-            icon: fab fa-linkedin-in
           - url: https://androdvlog.blogspot.com
             icon: fab fa-blogger-b
+          - url: https://bit.ly/AGR-DIGITALBUSSINES
+            icon: fas fa-share-alt
 
   contact:
     title: "Contáctenos"

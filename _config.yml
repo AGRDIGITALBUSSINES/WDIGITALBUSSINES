@@ -20,9 +20,9 @@ title      : AGR DIGITALBUSSINES
 email      : agrdigitalbussines@gmail.com #this is also the email contact forms will go to
 description: "Architecture | Marketing digital | NFT's Gallery | ArcMAPS | 3DModel | Renders | Revit | Civil Construction | AutoCAD"
 author     : Andrés Rodríguez
-# logo:     #optional, defaults to site title
-  # path: assets\img\clients\creative-market.jpg
-  # height: 60 #height in px, defaults to 52px
+  logo: logo_0     #optional, defaults to site title
+   path: assets\img\clients\logo_0.png
+   height: 60 #height in px, defaults to 52px
 
 locale: "es-CO" # See available languages in _data/sitetext.yml
 
