@@ -208,7 +208,7 @@ es: &DEFAULT_ES
         desc: "Nace como propuesta en un conversatorio en la ciudad de la La Plata en Argentina, sobre como poder impactar positivamente la cultura."
         image: assets/img/timeline/1.jpg
         alt:
-      - title: "Materializamos la idea"
+      - title: "La idea"
         year: "2014"
         desc: "Materializamos el sueño, tomando capacitaciones, tallerres, cursos y diplomados enfocados en cada una de las areas y servicios ofrecidos"
         image: assets/img/timeline/2.jpg
@@ -219,7 +219,7 @@ es: &DEFAULT_ES
         image: assets/img/timeline/3.jpg
         alt: image alt text
       - title: "Legado"
-        year: "2009-2011"
+        year: "2012-2021"
         desc: "Trabajar por un legado que impacte de manera positiva y transforme el mundo."
         image: assets/img/timeline/4.jpg
         alt:
@@ -230,7 +230,7 @@ es: &DEFAULT_ES
   about:
     title: "Sobre nosotros"
     text: "nuestra historia"
-    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas.<br> Dentro de los mercados emergentes nace nuestra galeria de crypto-arte, la cual esta enfocada al artista poco conocido, pero de gran talento. Esta visión junto a blockchain hacen de esta galeria un hecho posible.<br> Soy desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, Revit, ArcGIS, 3DStudio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]; Entusiasta de la programación y la WEB 3.0, con manejo de repositorios con Git - Github." 
+    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas. Dentro de los mercados emergentes nace nuestra galeria de crypto-arte, la cual esta enfocada al artista poco conocido, pero de gran talento. Esta visión junto a blockchain hacen de esta galeria un hecho posible.<br>Soy desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, Revit, ArcGIS, 3DStudio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]; Entusiasta de la programación y la WEB 3.0, con manejo de repositorios con Git - Github." 
     section: nosotros
 
   clients:
