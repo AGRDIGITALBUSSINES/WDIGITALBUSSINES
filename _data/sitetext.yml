@@ -181,7 +181,7 @@ es: &DEFAULT_ES
     section: servicios
     list:
       - title: "E-COMMERCE"
-        desc: "Ofrecemos una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulsamos tus propuestas con nuestras campañas de marketing digital."
+        desc: "Ofrecemos una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulsamos tus ideas con nuestras campañas de marketing digital."
         icon: fas fa-user-astronaut #find more at https://fontawesome.com/icons
       - title: "INGENIERÍA & ARQUITECTURA"
         desc: Elaboramos planos en AutoCAD, Civil 3D, modelos en Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS). "
@@ -230,7 +230,7 @@ es: &DEFAULT_ES
   about:
     title: "Sobre nosotros"
     text: "nuestra historia"
-    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas. Soy desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, Revit, ArcGIS, 3DStudio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]. Manejo de repositorios con Git - Github.<br> Dentro de los mercados emergentes nace nuestra galeria de crypto-arte, la cual esta enfocada al artista poco conocido, pero de gran talento. Esta visión junto a blockchain hacen de esta galeria un hecho posible." 
+    body: "Nuestra misión es un empresa que aporta valor al trabajo de las personas.<br> Dentro de los mercados emergentes nace nuestra galeria de crypto-arte, la cual esta enfocada al artista poco conocido, pero de gran talento. Esta visión junto a blockchain hacen de esta galeria un hecho posible.<br> Soy desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, Revit, ArcGIS, 3DStudio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]; Entusiasta de la programación y la WEB 3.0, con manejo de repositorios con Git - Github." 
     section: nosotros
 
   clients:
