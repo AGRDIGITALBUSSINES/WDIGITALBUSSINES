@@ -182,13 +182,13 @@ es: &DEFAULT_ES
     list:
       - title: "E-COMMERCE"
         desc: "Ofrecemos una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulsamos tus propuestas con nuestras campañas de marketing digital."
-        icon: fas fa-shopping-cart #find more at https://fontawesome.com/icons
+        icon: fas fa-user-astronaut #find more at https://fontawesome.com/icons
       - title: "INGENIERÍA & ARQUITECTURA"
         desc: Elaboramos planos en AutoCAD, Civil 3D, modelos en Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS). "
         icon: fas fa-laptop
       - title: "MODELADO & CODIGO"
         desc: "Elaboramos modelados en 3D Studio max y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad(Python). "
-        icon: fas fa-user-astronaut
+        icon: fab fa-codepen
 
   portfolio:
     title: "Portafolio"
