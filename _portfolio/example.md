@@ -2,12 +2,12 @@
 caption: #what displays in the portfolio grid:
   title: GALLERY
   subtitle: Cryto-Art
-  thumbnail: 04-thumbnail.jpg
+  thumbnail: assets/img/portfolio/04-thumbnail.jpg
   
 #what displays when the item is clicked:
 title: GALLERY
 subtitle: subtitle lorem ipsum dolor sit amet consectetur.
-image: 04-thumbnail.jpg #main image, can be a link or a file in assets/img/portfolio
+image: assets/img/portfolio/04-thumbnail.jpg #main image, can be a link or a file in assets/img/portfolio
 alt: image alt text
 
 ---
