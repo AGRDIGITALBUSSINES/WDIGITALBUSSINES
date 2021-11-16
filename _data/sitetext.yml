@@ -177,10 +177,10 @@ es: &DEFAULT_ES
 
   services:
     title: "Servicios"
-    text: " Architecture | Engineering | E-commerce | NFT's Gallery | ArcMAPS | 3DModel | C3D | Revit | AutoCAD "
+    text: " Architecture | Engineering | NFT's Gallery | ArcMAPS | 3DModel | C3D | Revit | AutoCAD "
     section: servicios
     list:
-      - title: "E-COMMERCE"
+      - title: "GALLERY"
         desc: "Ofrecemos una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulsamos tus ideas con nuestras campañas de marketing digital."
         icon: fas fa-user-astronaut #find more at https://fontawesome.com/icons
       - title: "INGENIERÍA & ARQUITECTURA"
