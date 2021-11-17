@@ -11,6 +11,6 @@ image: assets/img/portfolio/04-thumbnail.jpg #main image, can be a link or a fil
 alt: image alt text
 
 ---
-https://bit.ly/AGRNFT-GALLERY
+ Dentro de los mercados emergentes nace nuestra galeria de crypto-arte, la cual esta enfocada al artista poco conocido, pero de gran talento. Esta visión junto a blockchain hacen de esta galeria un hecho posible.
 
 
