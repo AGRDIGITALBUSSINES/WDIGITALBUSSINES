@@ -290,6 +290,8 @@ es: &DEFAULT_ES
         icon: "fas fa-user-astronaut"
       - url: https://bit.ly/AGR-DIGITALBUSSINES
         icon: "fas fa-share-alt"
+      - url: https://api.whatsapp.com/send?phone=+573024128452
+        icon: "fab fa-whatsapp"        
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
