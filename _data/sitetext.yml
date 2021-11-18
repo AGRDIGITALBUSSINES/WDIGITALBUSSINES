@@ -236,7 +236,7 @@ es: &DEFAULT_ES
   clients:
     section: clientes
     max-height: 100px
-    horizontal-scrolling: "" #"yes/no"
+    horizontal-scrolling: "yes" #"yes/no"
     list:
       - title: "envato"
         url: https://github.com/raviriley/agency-jekyll-theme
@@ -266,7 +266,7 @@ es: &DEFAULT_ES
           - url: https://androdvlog.blogspot.com
             icon: fab fa-blogger-b
           - url: https://bit.ly/AGR-DIGITALBUSSINES
-            icon: far fa-id-card
+            icon: fas fa-id-card-alt
 
   contact:
     title: "Contáctenos"
@@ -290,7 +290,7 @@ es: &DEFAULT_ES
       - url: https://sites.google.com/view/agrdigitalbussines/gallery
         icon: "fas fa-user-astronaut"
       - url: https://bit.ly/AGR-DIGITALBUSSINES
-        icon: "far fa-id-card"      
+        icon: "fas fa-id-card-alt"      
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
