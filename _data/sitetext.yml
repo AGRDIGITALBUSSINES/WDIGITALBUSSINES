@@ -266,11 +266,12 @@ es: &DEFAULT_ES
           - url: https://androdvlog.blogspot.com
             icon: fab fa-blogger-b
           - url: https://bit.ly/AGR-DIGITALBUSSINES
-            icon: fas fa-share-alt
+            icon: far fa-id-card
 
   contact:
     title: "Contáctenos"
-    section: contacto
+    text: "agrdigitalbussines@gmail.com. <br> 302-4128452."
+    section: contacto    
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."
     email: "Correo Electrónico*"
@@ -281,7 +282,7 @@ es: &DEFAULT_ES
     message-validation: "Por favor escriba un mensaje."
     subject: "Envío del formulario de contacto"
     submit: "Enviar Mensaje"
-    text: "Visita nuestra crypto galeria. <br> Visita nuestas redes sociales."
+    
 
   footer:
     legal: "Política de Privacidad"
@@ -289,9 +290,7 @@ es: &DEFAULT_ES
       - url: https://sites.google.com/view/agrdigitalbussines/gallery
         icon: "fas fa-user-astronaut"
       - url: https://bit.ly/AGR-DIGITALBUSSINES
-        icon: "fas fa-share-alt"
-      - url: https://api.whatsapp.com/send?phone=+573024128452
-        icon: "fab fa-whatsapp"        
+        icon: "far fa-id-card"      
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
