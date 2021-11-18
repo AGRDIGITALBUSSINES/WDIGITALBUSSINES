@@ -229,14 +229,14 @@ es: &DEFAULT_ES
 
   about:
     title: "Sobre nosotros"
-    text: "nuestra historia"
+    text: "Nuestra historia"
     body: "Nuestra misión es ser una empresa que aporta valor al trabajo de las personas.<br> Soy desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, Revit, ArcGIS, 3DStudio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]; Entusiasta de la programación y la WEB 3.0, con manejo de repositorios con Git - Github." 
     section: nosotros
 
   clients:
     section: clientes
     max-height: 100px
-    horizontal-scrolling: "yes" #"yes/no"
+    horizontal-scrolling: "" #"yes/no"
     list:
       - title: "envato"
         url: https://github.com/raviriley/agency-jekyll-theme
@@ -252,12 +252,12 @@ es: &DEFAULT_ES
         logo: assets/img/clients/creative-market.jpg
 
   team:
-    title: "NUESTRO INCREÍBLE EQUIPO"
+    title: "NUESTRO EQUIPO"
     text: ""
     subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería. <br> Graphic developer of Architecture and Engineering projects.
     section: equipo
     people:
-      - name: "Andrés Rodríguez"
+      - name: "Andrés G. Rodríguez"
         role: "Founder & CEO"
         image: assets/img/team/2.jpg
         social:
@@ -270,7 +270,7 @@ es: &DEFAULT_ES
 
   contact:
     title: "Contáctenos"
-    text: "agrdigitalbussines@gmail.com. <br> 302-4128452."
+    text: "agrdigitalbussines@gmail.com <br> 302-4128452"
     section: contacto    
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."

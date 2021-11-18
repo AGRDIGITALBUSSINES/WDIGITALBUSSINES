@@ -11,7 +11,7 @@ caption:
 ---
 
 Visit us | Visitanos.
-https://androdvlog.blogspot.com/
+androdvlog.blogspot.com
 
 
 

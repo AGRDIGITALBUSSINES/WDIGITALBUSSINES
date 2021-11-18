@@ -1,6 +1,6 @@
 ---
 title: CODE
-subtitle: Lorem ipsum dolor sit amet consectetur.
+subtitle: lineas de codigo.
 image: assets/img/portfolio/06-thumbnail.jpg
 alt: Keep Exploring
 
@@ -11,5 +11,5 @@ caption:
 ---
 
 Visit us | Visitanos.
-https://androdvlog.blogspot.com/
+androdvlog.blogspot.com
 
