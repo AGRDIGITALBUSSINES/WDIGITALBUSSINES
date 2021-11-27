@@ -264,11 +264,11 @@ es: &DEFAULT_ES
           - url: https://sites.google.com/view/agrdigitalbussines/gallery
             icon: fas fa-user-astronaut
           - url: https://androdvlog.blogspot.com
-            icon: fab fa-blogger
+            icon: fab fa-blogger-b
           - url: https://bit.ly/AGR-DIGITALBUSSINES
             icon: fas fa-id-card-alt
           - url: https://tippin.me/@AGRDIGITALBUSNS
-            icon: fab fa-id-bitcoin
+            icon: fab fa-bitcoin
 
   contact:
     title: "Contáctenos"
@@ -294,7 +294,7 @@ es: &DEFAULT_ES
       - url: https://bit.ly/AGR-DIGITALBUSSINES
         icon: "fas fa-id-card-alt"
       - url: https://tippin.me/@AGRDIGITALBUSNS
-        icon: "fab fa-id-bitcoin"         
+        icon: "fab fa-bitcoin"         
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
