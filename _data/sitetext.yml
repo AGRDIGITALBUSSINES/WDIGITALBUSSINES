@@ -294,7 +294,7 @@ es: &DEFAULT_ES
       - url: https://bit.ly/AGR-DIGITALBUSSINES
         icon: "fas fa-portrait"
       - url: https://tippin.me/@AGRDIGITALBUSNS
-        icon: "fab fa-bitcoin fa-spin fa-1x fa-fw"         
+        icon: "fab fa-bitcoin"         
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
