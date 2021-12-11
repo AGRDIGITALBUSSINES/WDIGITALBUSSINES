@@ -13,7 +13,7 @@
 
 theme: jekyll-agency
 
-url    : "https://agrdigitalbussines.github.io/WDIGITALBUSSINES/" # the base hostname & protocol for your site, e.g. http://example.com
+url    : "https://agrdb.com" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "https://androdvlog.blogspot.com" # the subpath of your site, e.g. /blog
 
 title      : AGR DIGITALBUSSINES
