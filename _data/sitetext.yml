@@ -267,7 +267,7 @@ es: &DEFAULT_ES
             icon: fab fa-blogger-b
           - url: https://bit.ly/AGR-DIGITALBUSSINES
             icon: fas fa-portrait
-          - url: https://tippin.me/@AGRDIGITALBUSNS
+          - url:  https://tippin.me/@agr_db
             icon: fab fa-bitcoin
 
   contact:
@@ -291,9 +291,9 @@ es: &DEFAULT_ES
     social:
       - url: https://sites.google.com/view/agrdigitalbussines/gallery
         icon: "fas fa-user-astronaut"
-      - url: https://bit.ly/AGR-DIGITALBUSSINES
-        icon: "fas fa-portrait"
-      - url: https://tippin.me/@AGRDIGITALBUSNS
+      - url: https://wa.me/573024128452
+        icon: "fas fa-whatsapp"
+      - url:  https://tippin.me/@agr_db
         icon: "fab fa-bitcoin"         
 es-ES:
   <<: *DEFAULT_ES
