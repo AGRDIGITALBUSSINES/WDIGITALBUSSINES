@@ -283,8 +283,7 @@ es: &DEFAULT_ES
     message: "Mensaje*"
     message-validation: "Por favor escriba un mensaje."
     subject: "Envío del formulario de contacto"
-    submit: "Enviar Mensaje"
-    
+    submit: "Enviar Mensaje"    
 
   footer:
     legal: "Política de Privacidad"
@@ -294,7 +293,7 @@ es: &DEFAULT_ES
       - url: https://wa.me/573024128452
         icon: "fab fa-whatsapp"
       - url:  https://tippin.me/@agr_db
-        icon: "fab fa-bitcoin"         
+        icon: "fab fa-bitcoin fa-spin"         
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
