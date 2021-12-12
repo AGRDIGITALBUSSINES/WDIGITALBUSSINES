@@ -27,7 +27,7 @@ author     : Andrés Rodríguez
 locale: "es-CO" # See available languages in _data/sitetext.yml
 
 analytics:
-  google: #G-T2CMM3M6PG #Google Analytics tracking code here
+  google: G-T2CMM3M6PG #Google Analytics tracking code here
 
 collections:
   portfolio:
