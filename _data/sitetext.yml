@@ -230,7 +230,7 @@ es: &DEFAULT_ES
   about:
     title: "Sobre nosotros"
     text: "Nuestra historia"
-    body: "Nuestra misión como empresa es aportar valor al trabajo de las personas.<br> Desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, Revit, ArcGIS, 3DStudio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]; Entusiasta de la programación y la WEB 3.0, con manejo de repositorios con Git - Github." 
+    body: "Nuestra misión como empresa es aportar valor al trabajo de las personas.<br> Desarrollador gráfico de proyectos de arquitectura e ingeniería, interpreto y expreso gráficamente proyectos de construcción de forma digital, con manejo de programas como AutoCAD, Civil 3D, Revit, ArcGIS, 3DStudio Max[VRAY],  Office, Magna-Sirgas[GNSS],  VBA, Dynamo[Python]; Entusiasta de la programación y la WEB3, con manejo de repositorios con Git - Github." 
     section: nosotros
 
   clients:
