@@ -192,7 +192,7 @@ es: &DEFAULT_ES
 
   portfolio:
     title: "Portafolio"
-    text: "NUESTRA GALERIA."
+    text: "PORTAFOLIO."
     section: portafolio
     closebutton: "Cerrar Proyecto"
 
@@ -272,7 +272,7 @@ es: &DEFAULT_ES
 
   contact:
     title: "Contáctenos"
-    text: "agrdigitalbussines@gmail.com <br> 302-4128452"
+    text: "agrdigitalbussines@gmail.com"
     section: contacto    
     name: "Nombre*"
     name-validation: "Por favor ingrese su nombre."
