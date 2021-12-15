@@ -192,7 +192,7 @@ es: &DEFAULT_ES
 
   portfolio:
     title: "Portafolio"
-    text: "PORTAFOLIO."
+    text: "Nuestro Portafolio."
     section: portafolio
     closebutton: "Cerrar Proyecto"
 
