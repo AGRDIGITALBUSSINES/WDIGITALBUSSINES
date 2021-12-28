@@ -170,24 +170,24 @@ en-AU:
 # -------
 es: &DEFAULT_ES
   header:
-    title: ¡Bienvenidos!
+    title: ¡Bienvenidos a!
     text: AGR<br>DIGITAL<br>BUSSINES
     button: Ver más
     buttonlink: "#servicios"
 
   services:
     title: "Servicios"
-    text: " Architecture | Engineering | NFT's Gallery | ArcMAPS | 3DModel | C3D | Revit | AutoCAD "
+    text: " Arquitectura | Ingeniería | NFT's Gallery | ArcMAPS | 3DModel | C3D | Revit | AutoCAD "
     section: servicios
     list:
       - title: "GALLERY"
-        desc: "Ofrecemos una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulsamos tus ideas con nuestras campañas de marketing digital."
+        desc: "Es una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulso tus ideas con campañas de marketing digital."
         icon: fas fa-user-astronaut #find more at https://fontawesome.com/icons
       - title: "INGENIERÍA & ARQUITECTURA"
-        desc: Elaboramos planos en AutoCAD, Civil 3D, modelos en Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS). "
+        desc: Elaboro planos en AutoCAD, Civil 3D, modelos en Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS). "
         icon: fas fa-laptop
       - title: "MODELADO & CODIGO"
-        desc: "Elaboramos modelados en 3D Studio max y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad(Python). "
+        desc: "Elaboro modelados en 3D Studio max y modelados BIM, automatización de procesos por medio de Macros, Dynamo, Pyautocad(Python). "
         icon: fab fa-codepen
 
   portfolio:
@@ -205,7 +205,7 @@ es: &DEFAULT_ES
     events:
       - title: "Nuestro Comienzo"
         year: "2012"
-        desc: "Nace como propuesta en un conversatorio en la ciudad de la La Plata en Argentina, sobre como poder impactar positivamente la cultura."
+        desc: "Nace como propuesta en un conversatorio en la ciudad de la La Plata en Argentina, sobre como poder impactar positivamente la sociedad."
         image: assets/img/timeline/1.jpg
         alt:
       - title: "La idea"
@@ -215,12 +215,12 @@ es: &DEFAULT_ES
         alt:
       - title: "Conectamos con el mundo"
         year: "2020"
-        desc: "Dentro de los mercados emergentes se crea la huella digital de ARG DIGITALBUSSINES para dar a conocer nuestros servicios al publico e impactar de manera positiva el mundo."
+        desc: "Dentro de los mercados emergentes se crea la huella digital de ARG DIGITALBUSSINES para dar a conocer los servicios al publico y asi poder aportar valor a la sociedad."
         image: assets/img/timeline/3.jpg
         alt: image alt text
       - title: "Legado"
         year: "2012-2021"
-        desc: "Trabajar por un legado que impacte de manera positiva y transforme el mundo."
+        desc: "Trabajar por un legado que impacte de manera positiva y transformado entornos de manera positiva."
         image: assets/img/timeline/4.jpg
         alt:
         # you can enforce the alignment
@@ -254,21 +254,20 @@ es: &DEFAULT_ES
   team:
     title: "NUESTRO EQUIPO"
     text: ""
-    subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería. <br> BIM Developer.
+    subtext: Desarrollador gráfico de proyectos de Arquitectura e Ingeniería. 
     section: equipo
     people:
       - name: "Andrés G. Rodríguez"
-        role: "Founder & CEO"
+        role: "Desarrollador BIM"
         image: assets/img/team/2.jpg
         social:
           - url: https://sites.google.com/view/agrdigitalbussines/gallery
             icon: fas fa-user-astronaut
-          - url: https://androdvlog.blogspot.com
+          - url: https://bit.ly/androd_vblog
             icon: fab fa-blogger-b
           - url: https://bit.ly/AGR-DIGITALBUSSINES
             icon: fas fa-portrait
-          - url:  https://bit.ly/3mpFRox
-            icon: fas fa-qrcode
+
 
   contact:
     title: "Contáctenos"
@@ -290,10 +289,10 @@ es: &DEFAULT_ES
     social:
       - url: https://sites.google.com/view/agrdigitalbussines/gallery
         icon: "fas fa-user-astronaut"
-      - url: https://wa.me/573024128452
-        icon: "fab fa-whatsapp"
       - url:  https://tippin.me/@agr_db
-        icon: "fab fa-bitcoin fa-spin"         
+        icon: "fab fa-bitcoin fa-spin" 
+      - url:  https://bit.ly/3mpFRox
+        icon: fas fa-qrcode                
 es-ES:
   <<: *DEFAULT_ES
 es-CO:
