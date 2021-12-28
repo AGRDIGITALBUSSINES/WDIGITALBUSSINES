@@ -268,7 +268,6 @@ es: &DEFAULT_ES
           - url: https://bit.ly/AGR-DIGITALBUSSINES
             icon: fas fa-portrait
 
-
   contact:
     title: "Contáctenos"
     text: "agrdigitalbussines@gmail.com"
