@@ -181,7 +181,7 @@ es: &DEFAULT_ES
     section: servicios
     list:
       - title: "GALLERY"
-        desc: "Es una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales, impulso tus ideas con campañas de marketing digital."
+        desc: "Es una ventana comercial con nuestra galeria de NFT's en Opensea, Meta (Facebook e Instagram) y otras plataformas digitales."
         icon: fas fa-user-astronaut #find more at https://fontawesome.com/icons
       - title: "INGENIERÍA & ARQUITECTURA"
         desc: Elaboro planos en AutoCAD, Civil 3D, modelos en Revit. Manejamos herramientas SIG como ArcGIS, Magna-Sirgas(GNSS). "
@@ -192,7 +192,7 @@ es: &DEFAULT_ES
 
   portfolio:
     title: "Portafolio"
-    text: "Nuestro Portafolio."
+    text: "Muestra de Portafolio."
     section: portafolio
     closebutton: "Cerrar Proyecto"
 
