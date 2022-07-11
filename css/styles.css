@@ -11780,5 +11780,5 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 .ratio{
-  
+  flex-wrap: wrap;
 }
