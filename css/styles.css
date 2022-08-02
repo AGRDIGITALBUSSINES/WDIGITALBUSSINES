@@ -153,6 +153,10 @@ h6, .h6 {
   font-size: 1rem;
 }
 
+h7, .h7 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
 h7, .h7{
   font-size: 1rem;
   font-style: italic;
@@ -11781,12 +11785,23 @@ section#contact form#contactForm :-ms-input-placeholder {
   color: #ced4da;
 }
 
+
+.ratio{
+  flex-wrap: wrap;
+}
+
+.video{
+  flex-wrap: wrap;
+  margin-top: 0;
+  font-size: 0.5rem;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-bottom: 4rem;
+}
+
 .footer {
   text-align: center;
   font-size: 0.9rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.ratio{
-  flex-wrap: wrap;
 }
