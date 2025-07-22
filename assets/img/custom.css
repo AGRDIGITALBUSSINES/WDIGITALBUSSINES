@@ -1,0 +1,327 @@
+/* filepath: d:\Documents\Programmer\WDIGITALBUSSINES\css\custom.css */
+:root {
+  --primary-color: #ffc800;
+  --dark-bg: #212529;
+}
+
+/* Ajustes globales */
+html {
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Tipografía */
+p {
+  line-height: 1.75;
+}
+
+h7, .h7 {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  font-family: "Roboto Slab", sans-serif;
+  margin-bottom: auto;
+}
+
+/* Secciones */
+.page-section {
+  padding: 6rem 0;
+}
+
+.page-section h2.section-heading {
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.page-section h3.section-subheading {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Roboto Slab", sans-serif;
+  margin-bottom: 4rem;
+}
+
+/* Botones */
+.btn-xl {
+  padding: 1.25rem 2.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.btn-social {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 100%;
+}
+
+/* Navegación */
+#mainNav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: var(--dark-bg);
+}
+
+#mainNav .navbar-toggler {
+  padding: 0.75rem;
+  font-size: 0.75rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#mainNav .navbar-brand {
+  color: var(--primary-color);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.0625em;
+  text-transform: uppercase;
+}
+
+#mainNav .navbar-brand img {
+  height: 1.5rem;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  color: #fff;
+  letter-spacing: 0.0625em;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active, 
+#mainNav .navbar-nav .nav-item .nav-link:hover {
+  color: var(--primary-color);
+}
+
+/* Cabecera */
+header.masthead {
+  padding-top: 10.5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+  color: #fff;
+  background-image: url("../assets/img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
+}
+
+header.masthead .masthead-subheading {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1.5rem;
+  margin-bottom: 25px;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+header.masthead .masthead-heading {
+  font-size: 3.25rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+/* Portfolio */
+#portfolio .portfolio-item {
+  max-width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 200, 0, 0.9);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity ease-in-out 0.25s;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+  font-size: 1.25rem;
+  color: white;
+}
+
+#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+  opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #e2e4e5;
+}
+
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+  font-style: italic;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+/* Modal de Portfolio */
+.portfolio-modal .modal-dialog {
+  margin: 1rem;
+  max-width: 100vw;
+}
+
+.portfolio-modal .modal-content {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.portfolio-modal .modal-content h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.portfolio-modal .modal-content img,
+.portfolio-modal .modal-content p,
+.portfolio-modal .modal-content ul.list-inline {
+  margin-bottom: 2rem;
+}
+
+.portfolio-modal .close-modal {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.portfolio-modal .close-modal:hover {
+  opacity: 0.3;
+}
+
+/* Sección de contacto */
+section#contact {
+  background-color: var(--dark-bg);
+  background-image: url("../assets/img/map-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section#contact .section-heading {
+  color: #fff;
+}
+
+/* Video */
+.ratio {
+  flex-wrap: wrap;
+}
+
+.video {
+  flex-wrap: wrap;
+  margin-top: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 4rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 0.9rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+  section {
+    padding: 9rem 0;
+  }
+  
+  header.masthead {
+    padding-top: 17rem;
+    padding-bottom: 12.5rem;
+  }
+  
+  header.masthead .masthead-subheading {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  header.masthead .masthead-heading {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  #mainNav {
+    padding: 1.5rem 0;
+    background-color: transparent;
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+  }
+  
+  #mainNav .navbar-brand {
+    font-size: 1.5em;
+    transition: font-size 0.3s ease-in-out;
+  }
+  
+  #mainNav .navbar-brand img {
+    height: 2rem;
+    transition: height 0.3s ease-in-out;
+  }
+  
+  #mainNav.navbar-shrink {
+    padding: 1rem 0;
+    background-color: var(--dark-bg);
+  }
+  
+  #mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25em;
+  }
+  
+  #mainNav.navbar-shrink .navbar-brand svg,
+  #mainNav.navbar-shrink .navbar-brand img {
+    height: 1.5rem;
+  }
+  
+  #mainNav .navbar-nav .nav-item {
+    margin-right: 1rem;
+  }
+  
+  #mainNav .navbar-nav .nav-item:last-child {
+    margin-right: 0;
+  }
+}
