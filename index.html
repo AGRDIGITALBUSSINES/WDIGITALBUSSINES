@@ -158,17 +158,24 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <!-- Portfolio item 6-->                        
+                        <!-- Portfolio item 6 - Dashboard embebido-->                        
                         <div class="portfolio-item"> 
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/8.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
+                            <div class="portfolio-caption mb-3">
                                 <div class="portfolio-caption-heading">VISUALIZACIÓN DE DATA</div>
                                 <div class="portfolio-caption-subheading text-muted">Dashboard Interactivo</div>
+                            </div>
+                            <!-- Dashboard embebido directamente -->
+                            <div class="ratio ratio-16x9 shadow-sm rounded">
+                                <iframe 
+                                    src="https://app.powerbi.com/view?r=eyJrIjoiOGE3NDRhZjYtMDNmNS00NDQ4LThkMzctYjFiYzI0ODUyNTA5IiwidCI6IjE2YjQ4NGIzLTQ2YzgtNDQ3YS1iMWFhLWFhMTYzNWYyY2I2YiJ9" 
+                                    frameborder="0" 
+                                    allowFullScreen="true"
+                                    style="border: none; border-radius: 8px;"
+                                    loading="lazy">
+                                </iframe>
+                            </div>
+                            <div class="portfolio-caption mt-2">
+                                <small class="text-muted">Dashboard para la planeación y ejecución</small>
                             </div>
                         </div> 
                     </div>
@@ -354,34 +361,6 @@
             </div>
         </div>
         
-        <!-- Portfolio item 2 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <h2 class="text-uppercase">VBA</h2>
-                                    <p class="item-intro text-muted">Programación en VBA.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                    <p>Este es un script en Visual Basic Application (VBA) desarrollado en excel, el cual toma los bloques en el dibujo generando un diccionario de bloques para luego insertarlos en los x,y dados, se pueden manejar atributos como rotación.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Cliente:</strong> AGRDB</li>
-                                        <li><strong>Categoría:</strong> Programación</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i> Cerrar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <!-- Portfolio item 3 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -410,34 +389,6 @@
             </div>
         </div>
         
-        <!-- Portfolio item 4 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <h2 class="text-uppercase">3ds max</h2>
-                                    <p class="item-intro text-muted">Render en VRay</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
-                                    <p>Este es un render de una scena en 3DS Max, ambientado con parametros como la luz, transparencia en vidrios o brillo en pisos.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Cliente:</strong> AGR</li>
-                                        <li><strong>Categoría:</strong> Render</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i> Cerrar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
         <!-- Portfolio item 5 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
@@ -454,42 +405,6 @@
                                     <ul class="list-inline">
                                         <li><strong>Cliente:</strong> AGRDB</li>
                                         <li><strong>Categoría:</strong> AutoCAD</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-times me-1"></i> Cerrar
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Portfolio item 6 modal popup-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="close-modal" data-bs-dismiss="modal"><img src="assets/img/close-icon.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <h2 class="text-uppercase">Power BI</h2>
-                                    <p class="item-intro text-muted">Storytelling With Data</p>
-                                    <div class="ratio ratio-16x9">
-                                        <iframe 
-                                            src="https://app.powerbi.com/view?r=eyJrIjoiOGE3NDRhZjYtMDNmNS00NDQ4LThkMzctYjFiYzI0ODUyNTA5IiwidCI6IjE2YjQ4NGIzLTQ2YzgtNDQ3YS1iMWFhLWFhMTYzNWYyY2I2YiJ9" frameborder="0" allowFullScreen="true"></iframe>" 
-                                            width="100%" 
-                                            height="500" 
-                                            frameborder="0" 
-                                            allowFullScreen="true">
-                                        </iframe>
-                                    </div>
-                                    <p>Dashboard para la planeación y ejecución. Sólo se muestra una parte por derechos creativos.</p>
-                                    <ul class="list-inline">
-                                        <li><strong>Cliente:</strong> AGRDB</li>
-                                        <li><strong>Categoría:</strong> Power BI</li>
                                     </ul>
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-times me-1"></i> Cerrar
