@@ -13122,3 +13122,21 @@ html {
         width: 28px;
     }
 }
+
+/* ===========================================
+   FOOTER - Iconos sociales
+   =========================================== */
+
+.footer .btn-social {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.footer .btn-social:hover {
+    transform: translateY(-5px);
+    background: #ffc800;
+    border-color: #ffc800;
+    color: #000;
+}
