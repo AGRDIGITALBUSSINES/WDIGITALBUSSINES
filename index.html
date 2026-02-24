@@ -38,6 +38,9 @@
     </script>
 </head>
     <body id="page-top">
+        <!-- Skip to content link for accessibility -->
+        <a class="skip-link" href="#services">Saltar al contenido</a>
+        
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
@@ -50,8 +53,6 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#video">Videos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#models">Modelos 3D</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Acerca de</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
                     </ul>
@@ -75,30 +76,33 @@
                     <h2 class="section-heading text-uppercase">Servicios</h2>
                     <h3 class="section-subheading text-muted">Consultoria BIM | Arquitectura | Ingeniería | Automatización | Integración BIM - GIS | Digital Twins.</h3>
                 </div>
-                <div class="row text-center">
+                <div class="row g-4">
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-layer-group fa-stack-1x fa-inverse"></i> 
-                        </span>
-                        <h4 class="my-3">BIM - Building Information Modeling</h4>
-                        <p class="text-muted">Especialista BIM con más de 10 años de experiencia en la implementación de metodologías BIM para proyectos complejos de arquitectura, ingeniería y construcción. Experto en herramientas como Revit, Tekla, Navisworks, Civil 3D e Infraworks, optimizando la gestión de modelos 3D, coordinación de equipos y toma de decisiones mediante integración con SIG y visualización en Power BI.</p>
+                        <div class="service-card text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h4>BIM - Building Information Modeling</h4>
+                            <p>Especialista BIM con más de 10 años de experiencia en la implementación de metodologías BIM para proyectos complejos de arquitectura, ingeniería y construcción. Experto en herramientas como Revit, Tekla, Navisworks, Civil 3D e Infraworks.</p>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-drafting-compass fa-stack-1x fa-inverse"></i>  
-                        </span>
-                        <h4 class="my-3">ARQUITECTURA E INGENIERÍA</h4>
-                        <p class="text-muted">Dominio en el desarrollo de planos y modelos con AutoCAD, Civil 3D y Revit, con un enfoque en precisión y eficiencia. Integración avanzada de datos geoespaciales en proyectos mediante ArcGIS y tecnologías SIG, garantizando resultados coherentes y detallados en cada fase del diseño y ejecución.</p>
+                        <div class="service-card text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-drafting-compass"></i>
+                            </div>
+                            <h4>ARQUITECTURA E INGENIERÍA</h4>
+                            <p>Dominio en el desarrollo de planos y modelos con AutoCAD, Civil 3D y Revit, con un enfoque en precisión y eficiencia. Integración avanzada de datos geoespaciales en proyectos mediante ArcGIS y tecnologías SIG.</p>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop-code fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">AUTOMATIZACIÓN</h4>
-                        <p class="text-muted">Experto en automatización de flujos de trabajo mediante programación en Python, VBA y soluciones no-code como Dynamo. Implemento herramientas para optimizar procesos en proyectos de infraestructura, mejorando la productividad y reduciendo tiempos en la ejecución de tareas repetitivas.</p>
+                        <div class="service-card text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h4>AUTOMATIZACIÓN</h4>
+                            <p>Experto en automatización de flujos de trabajo mediante programación en Python, VBA y soluciones no-code como Dynamo. Implemento herramientas para optimizar procesos en proyectos de infraestructura.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,130 +113,181 @@
             <div class="container shadow">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Portafolio</h2>
-                    <h3 class="section-subheading text-muted">Esta es una muestra de mi portafolio.</h3>
+                    <h3 class="section-subheading text-muted">Explora mis proyectos</h3>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 1-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                
+                <!-- Carrusel de Portafolio -->
+                <div class="portfolio-carousel-wrapper">
+                    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="false">
+                        
+                        <!-- Slides -->
+                        <div class="carousel-inner">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card">
+                                            <a href="#portfolioModal1" data-bs-toggle="modal">
+                                                <img src="assets/img/portfolio/1.jpg" alt="Geoproceso" />
+                                            </a>
+                                            <div class="carousel-card-caption">
+                                                <h5>GEOPROCESO</h5>
+                                                <p>ArcGIS & QGIS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card">
+                                            <a href="#portfolioModal5" data-bs-toggle="modal">
+                                                <img src="assets/img/portfolio/5.jpg" alt="Plano Planta" />
+                                            </a>
+                                            <div class="carousel-card-caption">
+                                                <h5>PLANO PLANTA</h5>
+                                                <p>AutoCAD & Civil 3D</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">GEOPROCESO</div>
-                                <div class="portfolio-caption-subheading text-muted">ArcGIS & QGIS</div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card">
+                                            <div class="carousel-card-iframe">
+                                                <iframe 
+                                                    src="https://app.powerbi.com/view?r=eyJrIjoiOGE3NDRhZjYtMDNmNS00NDQ4LThkMzctYjFiYzI0ODUyNTA5IiwidCI6IjE2YjQ4NGIzLTQ2YzgtNDQ3YS1iMWFhLWFhMTYzNWYyY2I2YiJ9" 
+                                                    frameborder="0" 
+                                                    allowFullScreen="true"
+                                                    loading="lazy">
+                                                </iframe>
+                                            </div>
+                                            <div class="carousel-card-caption">
+                                                <h5>ANALYTICS</h5>
+                                                <p>Power BI Dashboard</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card">
+                                            <a href="https://www.youtube.com/watch?v=W2S6_7KCKmU" target="_blank">
+                                                <img src="https://img.youtube.com/vi/W2S6_7KCKmU/maxresdefault.jpg" alt="Dynamo" />
+                                                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                            </a>
+                                            <div class="carousel-card-caption">
+                                                <h5>DYNAMO</h5>
+                                                <p>Automatización Civil 3D</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card">
+                                            <a href="https://www.youtube.com/watch?v=Ib81ZiSZojA" target="_blank">
+                                                <img src="https://img.youtube.com/vi/Ib81ZiSZojA/maxresdefault.jpg" alt="Python" />
+                                                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                            </a>
+                                            <div class="carousel-card-caption">
+                                                <h5>PYTHON</h5>
+                                                <p>Automatización AutoCAD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card">
+                                            <a href="https://www.youtube.com/watch?v=ZPh4pBBsDqs" target="_blank">
+                                                <img src="https://img.youtube.com/vi/ZPh4pBBsDqs/maxresdefault.jpg" alt="GIS" />
+                                                <div class="play-overlay"><i class="fas fa-play"></i></div>
+                                            </a>
+                                            <div class="carousel-card-caption">
+                                                <h5>DYNAMO + GIS</h5>
+                                                <p>Integración BIM-GIS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card model-card">
+                                            <a href="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/scl/fi/sc7ymra5y2i91j5xbt5ty/PUENTE-BOX.ifc?rlkey=398vaek09cl5ysttggwkwet9u&st=he23ereu&dl=0" target="_blank">
+                                                <iframe 
+                                                    src="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/scl/fi/sc7ymra5y2i91j5xbt5ty/PUENTE-BOX.ifc?rlkey=398vaek09cl5ysttggwkwet9u&st=he23ereu&dl=0$camera=-647.07678,40.22679,1458.40680,-295.11790,5.45484,670.30353,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,66,91,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"
+                                                    loading="lazy">
+                                                </iframe>
+                                                <div class="model-overlay-btn"><i class="fas fa-cube"></i> Ver 3D</div>
+                                            </a>
+                                            <div class="carousel-card-caption">
+                                                <h5>PUENTE BOX</h5>
+                                                <p>Modelo Tekla - IFC</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card model-card">
+                                            <a href="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/s/qilazzkz00mi0je/RGT_AC_1_T0_MOD_HPAN_4102_ALL_Urbanismo.ifc" target="_blank">
+                                                <iframe 
+                                                    src="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/s/qilazzkz00mi0je/RGT_AC_1_T0_MOD_HPAN_4102_ALL_Urbanismo.ifc$camera=-230.52642,340.11292,526.84662,-86.30407,0.24257,9.08109,0.00000,1.00000,0.00000,45.00000$cameramode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,66,91,255$defaultcolor=200,200,200$edgesettings=off,0,0,0,1"
+                                                    loading="lazy">
+                                                </iframe>
+                                                <div class="model-overlay-btn"><i class="fas fa-cube"></i> Ver 3D</div>
+                                            </a>
+                                            <div class="carousel-card-caption">
+                                                <h5>URBANISMO</h5>
+                                                <p>Modelo Civil 3D - IFC</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 5 -->
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6 px-3">
+                                        <div class="carousel-card model-card">
+                                            <a href="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/scl/fi/ja2u9725j7gv2xjnljc6r/1920_AGRC_ELE.ifc?rlkey=kr6f31umwegmdilydbrv34el2&st=wy4matg0&dl=0" target="_blank">
+                                                <iframe 
+                                                    src="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/scl/fi/ja2u9725j7gv2xjnljc6r/1920_AGRC_ELE.ifc?rlkey=kr6f31umwegmdilydbrv34el2&st=wy4matg0&dl=0$camera=102.86943,15.04578,-118.63812,280.01458,4.05000,-566.85428,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,66,91,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"
+                                                    loading="lazy">
+                                                </iframe>
+                                                <div class="model-overlay-btn"><i class="fas fa-cube"></i> Ver 3D</div>
+                                            </a>
+                                            <div class="carousel-card-caption">
+                                                <h5>EDIFICACIÓN</h5>
+                                                <p>Modelo Revit - IFC</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        
+                        <!-- Flechas de navegación -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                            <span class="carousel-arrow"><i class="fas fa-chevron-left"></i></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+                            <span class="carousel-arrow"><i class="fas fa-chevron-right"></i></span>
+                        </button>
                     </div>
                     
-                    <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                        <!-- Portfolio item 5-->
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">PLANO PLANTA</div>
-                                <div class="portfolio-caption-subheading text-muted">Planta de Localización</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 mb-4">
-                        <!-- Portfolio item 6 - Dashboard con altura ajustada -->
-                        <div class="portfolio-item">
-                            <!-- Dashboard embebido con altura igual a las imágenes -->
-                            <div class="ratio shadow-sm rounded" style="border-radius: 8px; aspect-ratio: 4/3;">
-                                <iframe 
-                                    src="https://app.powerbi.com/view?r=eyJrIjoiOGE3NDRhZjYtMDNmNS00NDQ4LThkMzctYjFiYzI0ODUyNTA5IiwidCI6IjE2YjQ4NGIzLTQ2YzgtNDQ3YS1iMWFhLWFhMTYzNWYyY2I2YiJ9" 
-                                    frameborder="0" 
-                                    allowFullScreen="true"
-                                    style="border: none; border-radius: 8px; font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';"
-                                    loading="lazy">
-                                </iframe>
-                            </div>
-                            <!-- Título y subtítulo como los demás -->
-                            <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">ANALYTICS</div>
-                                <div class="portfolio-caption-subheading text-muted">Storytelling With Data</div>
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Video -->       
-        <section class="page-section bg-light" id="video">
-            <div class="container shadow">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Videos</h2>
-                    <h3 class="section-subheading text-muted">Tutoriales y demostraciones de proyectos</h3>
-                </div>                
-                <div class="row align-items-center">
-                    <div class="col-lg-4 col-sm-0 mb-0 mb-sm-0 mx-auto center">
-                        <div class="team-menber mb-4">
-                            <h4>Dynamo</h4>
-                            <h7 class="section-subheading text-muted">Automatización en Civil 3D</h7>
-                            <iframe width="device-width" height="325" style="border:1px solid #555555;" src="https://www.youtube.com/embed/W2S6_7KCKmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-0 mb-0 mb-sm-0 mx-auto center">
-                        <div class="team-menber mb-4">
-                            <h4>Python</h4>
-                            <h7 class="section-subheading text-muted">Python para AutoCAD</h7>
-                            <iframe width="device-width" height="325" style="border:1px solid #555555;" src="https://www.youtube.com/embed/Ib81ZiSZojA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-0 mb-0 mb-sm-0 mx-auto center">
-                        <div class="team-menber mb-4">
-                            <h4>GIS</h4>
-                            <h7 class="section-subheading text-muted">Dynamo con GIS</h7>
-                            <iframe width="device-width" height="325" style="border:1px solid #555555;" src="https://www.youtube.com/embed/ZPh4pBBsDqs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-4 mb-5 pb-3">
-                    <a href="https://www.youtube.com/c/AndrésRodríguez2" target="_blank" class="btn btn-primary btn-xl text-uppercase">
-                        <i class="fab fa-youtube me-2"></i>Suscríbete al canal
-                    </a>
-                </div>
-            </div>            
-        </section>
-        
-        <!-- Models -->
-        <section class="page-section bg-light" id="models">
-            <div class="container shadow">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Modelos 3D</h2>
-                    <h3 class="section-subheading text-muted">Modelados en C3D, Revit & más.</h3>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-lg-4 col-sm-0 mb-0 mb-sm-0 mx-auto center">
-                        <div class="team-menber mb-4">
-                            <h4>Modelo en Tekla</h4>
-                            <h7 class="section-subheading text-muted">Formato: IFC.</h7>
-                            <iframe width="device-width" height="325" style="border:1px solid #555555;" src="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/scl/fi/sc7ymra5y2i91j5xbt5ty/PUENTE-BOX.ifc?rlkey=398vaek09cl5ysttggwkwet9u&st=he23ereu&dl=0$camera=-647.07678,40.22679,1458.40680,-295.11790,5.45484,670.30353,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,66,91,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"></iframe>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-0 mb-0 mb-sm-0 mx-auto center">
-                        <div class="team-menber mb-4">
-                            <h4>Modelo en Civil 3D</h4>
-                            <h7 class="section-subheading text-muted">Formato: IFC.</h7>
-                            <iframe width="device-width" height="325" style="border:1px solid #555555;" src="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/s/qilazzkz00mi0je/RGT_AC_1_T0_MOD_HPAN_4102_ALL_Urbanismo.ifc$camera=-230.52642,340.11292,526.84662,-86.30407,0.24257,9.08109,0.00000,1.00000,0.00000,45.00000$cameramode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,66,91,255$defaultcolor=200,200,200$edgesettings=off,0,0,0,1"></iframe>
-                        </div>
-                    </div>                
-                    <div class="col-lg-4 col-sm-0 mb-0 mb-sm-0 mx-auto center">
-                        <div class="team-menber mb-4">
-                            <h4>Modelo en Revit</h4>
-                            <h7 class="section-subheading text-muted">Formato: IFC.</h7>
-                            <iframe width="device-width" height="325" style="border:1px solid #555555;" src="https://3dviewer.net/embed.html#model=https://dl.dropbox.com/scl/fi/ja2u9725j7gv2xjnljc6r/1920_AGRC_ELE.ifc?rlkey=kr6f31umwegmdilydbrv34el2&st=wy4matg0&dl=0$camera=102.86943,15.04578,-118.63812,280.01458,4.05000,-566.85428,0.00000,1.00000,0.00000,45.00000$projectionmode=perspective$envsettings=fishermans_bastion,off$backgroundcolor=42,66,91,255$defaultcolor=200,200,200$defaultlinecolor=100,100,100$edgesettings=off,0,0,0,1"></iframe>
-                        </div>
+                    <!-- Indicadores de puntos -->
+                    <div class="carousel-indicators-custom">
+                        <button class="dot active" data-bs-target="#portfolioCarousel" data-bs-slide-to="0"></button>
+                        <button class="dot" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
+                        <button class="dot" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
+                        <button class="dot" data-bs-target="#portfolioCarousel" data-bs-slide-to="3"></button>
+                        <button class="dot" data-bs-target="#portfolioCarousel" data-bs-slide-to="4"></button>
                     </div>
                 </div>
             </div>
@@ -244,21 +299,17 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Acerca de</h2>
                 </div>
-                <div class="center">
-                    <div class="team-member">
-                        <img class="mx-auto rounded-circle" src="assets/img/team/2.jpg" alt="..." />
-                        <h4>Andrés G. Rodríguez</h4>
-                        <p class="text-muted">BIM Infraestructura.<br>Desarrollador BIM</p>
+                <div class="about-card text-center mt-5">
+                    <img class="about-photo" src="assets/img/team/2.jpg" alt="Andrés G. Rodríguez" />
+                    <h3 class="about-name">Andrés G. Rodríguez</h3>
+                    <p class="about-title">BIM Infraestructura | Desarrollador BIM</p>
+                    <div class="about-social">
                         <a class="btn btn-dark btn-social mx-2" href="https://bit.ly/androd_vblog"><i class="fab fa-blogger-b"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://www.youtube.com/c/AndrésRodríguez2" target="_blank"><i class="fab fa-youtube"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/agrdb"><i class="fab fa-linkedin"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://github.com/AGRDIGITALBUSSINES"><i class="fab fa-github"></i></a>
                     </div>
-                </div>
-                <div class="center">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <p class="large text-muted">Especialista BIM con más de 10 años de experiencia en la industria de la arquitectura, ingeniería y construcción. Experto en metodologías de Building Information Modeling (BIM), con dominio de herramientas como AutoCAD Civil 3D, Revit, Tekla, Navisworks, Infraworks y ArcGIS. Habilidades avanzadas en visualización de datos con Power BI e integración de BIM con sistemas de información geográfica (GIS).<br>
-                        Enfoque en la optimización de procesos mediante programación en Python, C# y soluciones no-code como Dynamo para mejorar flujos de trabajo en proyectos complejos de infraestructura.</p>
-                    </div>
+                    <p class="about-bio">Especialista BIM con más de 10 años de experiencia en la industria de la arquitectura, ingeniería y construcción. Experto en metodologías de Building Information Modeling (BIM), con dominio de herramientas como AutoCAD Civil 3D, Revit, Tekla, Navisworks, Infraworks y ArcGIS. Habilidades avanzadas en visualización de datos con Power BI e integración de BIM con sistemas de información geográfica (GIS). Enfoque en la optimización de procesos mediante programación en Python, C# y soluciones no-code como Dynamo para mejorar flujos de trabajo en proyectos complejos de infraestructura.</p>
                 </div>
             </div>
         </section>
@@ -268,32 +319,39 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Contacto</h2>
-                    <a class="btn btn-dark btn-social mx-2" href="https://agrdb.notion.site/Andr-s-G-Rodr-guez-AGRDB-0e951a9c40f542469b85d28aff8e7c54?pvs=4"><i class="fas fa-file-contract"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="https://linktr.ee/AGRDIGITALBUSSINES"><i class="fas fa-id-card"></i></a>
                 </div>
-                <div class="row justify-content-center mt-4">
+                <div class="row justify-content-center mt-5">
                     <div class="col-lg-8">
-                        <form id="contactForm">
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Tu nombre" required />
-                                <label for="name">Nombre</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="nombre@ejemplo.com" required />
-                                <label for="email">Correo electrónico</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="subject" type="text" placeholder="Asunto" />
-                                <label for="subject">Asunto</label>
-                            </div>
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" placeholder="Escribe tu mensaje aquí..." style="height: 150px" required></textarea>
-                                <label for="message">Mensaje</label>
-                            </div>
-                            <div class="d-grid">
-                                <button class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar mensaje</button>
-                            </div>
-                        </form>
+                        <div class="contact-card">
+                            <form id="contactForm" action="https://formspree.io/f/xbdapqzl" method="POST">
+                                <!-- Campo anti-spam (honeypot) - no borrar -->
+                                <input type="text" name="_gotcha" style="display:none">
+                                <!-- Redirección después del envío -->
+                                <input type="hidden" name="_next" value="https://agrdigitalbussines.github.io/WDIGITALBUSSINES/#contact">
+                                <!-- Asunto del email -->
+                                <input type="hidden" name="_subject" value="Nuevo mensaje desde AGRDB Web">
+                                
+                                <div class="form-floating mb-4">
+                                    <input class="form-control" id="name" name="name" type="text" placeholder="Tu nombre" required />
+                                    <label for="name">Nombre</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="nombre@ejemplo.com" required />
+                                    <label for="email">Correo electrónico</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <input class="form-control" id="subject" name="subject" type="text" placeholder="Asunto" />
+                                    <label for="subject">Asunto</label>
+                                </div>
+                                <div class="form-floating mb-4">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Escribe tu mensaje aquí..." style="height: 150px" required></textarea>
+                                    <label for="message">Mensaje</label>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar mensaje</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -303,7 +361,7 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; AGR DigitalBussines 2022</div>
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; AGR DigitalBussines 2022 - 2026</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="https://tippin.me/@agr_db"><i class="fab fa-bitcoin"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href=" https://www.patreon.com/agrdb"><i class="fab fa-patreon"></i></a>
