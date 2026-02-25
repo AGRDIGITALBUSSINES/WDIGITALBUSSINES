@@ -262,8 +262,11 @@ window.addEventListener('DOMContentLoaded', event => {
         
         // Escuchar cambio de slide
         carousel.addEventListener('slid.bs.carousel', (event) => {
-            dots.forEach(dot => dot.classList.remove('active'));
-            dots[event.to].classList.add('active');
+            const currentDots = document.querySelectorAll('.carousel-indicators-custom .dot');
+            currentDots.forEach(dot => dot.classList.remove('active'));
+            if (currentDots[event.to]) {
+                currentDots[event.to].classList.add('active');
+            }
         });
         
         // Click en los indicadores
@@ -274,6 +277,94 @@ window.addEventListener('DOMContentLoaded', event => {
             });
         });
     };
+
+    // ===================================
+    // PORTFOLIO CARRUSEL - Móvil (1 item por slide)
+    // ===================================
+    
+    const setupMobileCarousel = () => {
+        const carousel = document.getElementById('portfolioCarousel');
+        const carouselInner = carousel?.querySelector('.carousel-inner');
+        const dotsContainer = document.querySelector('.carousel-indicators-custom');
+        
+        if (!carousel || !carouselInner || !dotsContainer) return;
+        
+        const isMobile = window.innerWidth < 768;
+        
+        // Guardar estructura original si no existe
+        if (!carousel.dataset.originalHtml) {
+            carousel.dataset.originalHtml = carouselInner.innerHTML;
+            carousel.dataset.originalDots = dotsContainer.innerHTML;
+        }
+        
+        if (isMobile) {
+            // Restaurar HTML original primero
+            carouselInner.innerHTML = carousel.dataset.originalHtml;
+            
+            // Obtener todas las tarjetas
+            const allCards = [];
+            const slides = carouselInner.querySelectorAll('.carousel-item');
+            
+            slides.forEach(slide => {
+                const cards = slide.querySelectorAll('.col-md-6');
+                cards.forEach(card => {
+                    allCards.push(card.innerHTML);
+                });
+            });
+            
+            // Crear nuevos slides individuales
+            carouselInner.innerHTML = '';
+            allCards.forEach((cardHtml, index) => {
+                const slideDiv = document.createElement('div');
+                slideDiv.className = 'carousel-item' + (index === 0 ? ' active' : '');
+                slideDiv.innerHTML = `
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 px-3">
+                            ${cardHtml}
+                        </div>
+                    </div>
+                `;
+                carouselInner.appendChild(slideDiv);
+            });
+            
+            // Actualizar indicadores
+            dotsContainer.innerHTML = '';
+            allCards.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = 'dot' + (index === 0 ? ' active' : '');
+                dot.setAttribute('data-bs-target', '#portfolioCarousel');
+                dot.setAttribute('data-bs-slide-to', index);
+                dot.addEventListener('click', () => {
+                    const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+                    bsCarousel.to(index);
+                });
+                dotsContainer.appendChild(dot);
+            });
+        } else {
+            // Restaurar estructura original en desktop
+            if (carousel.dataset.originalHtml) {
+                carouselInner.innerHTML = carousel.dataset.originalHtml;
+                dotsContainer.innerHTML = carousel.dataset.originalDots;
+                
+                // Reinicializar click en dots
+                const dots = dotsContainer.querySelectorAll('.dot');
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+                        bsCarousel.to(index);
+                    });
+                });
+            }
+        }
+    };
+
+    // Ejecutar al cargar y al cambiar tamaño de ventana
+    setupMobileCarousel();
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(setupMobileCarousel, 250);
+    });
 
     // ===================================
     // INICIALIZACIÓN

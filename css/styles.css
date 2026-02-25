@@ -13091,6 +13091,12 @@ html {
         padding: 0 40px;
     }
     
+    /* En móvil, cada tarjeta ocupa el 100% del ancho */
+    #portfolioCarousel .carousel-item .row .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
     .carousel-card img,
     .carousel-card-iframe,
     .model-card iframe,
