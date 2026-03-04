@@ -12584,7 +12584,7 @@ html {
 .service-icon {
     width: 100px;
     height: 100px;
-    background: linear-gradient(135deg, #ffc800 0%, #ff8c00 100%);
+    background: linear-gradient(135deg, #fff3d0 0%, #ffe0a0 100%);
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -12594,13 +12594,14 @@ html {
 }
 
 .service-icon i {
-    font-size: 42px;
-    color: white;
+    font-size: 54px;
+    color: #1a1a1a;
 }
 
 .service-card:hover .service-icon {
     transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 10px 30px rgba(255, 200, 0, 0.4);
+    background: linear-gradient(135deg, #ffe580 0%, #ffc800 100%);
+    box-shadow: 0 10px 30px rgba(255, 200, 0, 0.3);
 }
 
 .service-card h4 {
