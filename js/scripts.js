@@ -217,27 +217,83 @@ window.addEventListener('DOMContentLoaded', event => {
             standaloneIframes.forEach(iframe => observer.observe(iframe));
         }
 
-        // 2. Carga diferida por evento de carrusel (para modelos 3D e iframes pesados)
+        // 2. Carga inteligente del carrusel de portafolio
         const carousel = document.getElementById('portfolioCarousel');
         if (!carousel) return;
 
-        const loadSlideIframes = (slideIndex) => {
+        const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
+        const totalSlides = carousel.querySelectorAll('.carousel-item').length;
+
+        // Detecta si un slide tiene iframes pesados (modelos 3D / dashboards)
+        const isHeavySlide = (slideIndex) => {
             const slides = carousel.querySelectorAll('.carousel-item');
-            if (!slides[slideIndex]) return;
-            
-            const iframes = slides[slideIndex].querySelectorAll('iframe[data-src]');
-            iframes.forEach(iframe => {
-                iframe.src = iframe.dataset.src;
-                iframe.removeAttribute('data-src');
-                // Ocultar spinner cuando el iframe termine de cargar
-                iframe.addEventListener('load', () => {
-                    const container = iframe.closest('.carousel-card-iframe, .model-card');
-                    if (container) container.classList.add('iframe-loaded');
-                }, { once: true });
-            });
+            if (!slides[slideIndex]) return false;
+            return slides[slideIndex].querySelectorAll('iframe, iframe[data-src]').length > 0;
         };
 
-        // Cargar iframes del slide activo al inicio (si la sección es visible)
+        // Carga los iframes de un slide y devuelve una Promise que se resuelve
+        // cuando todos terminan de cargar (o tras un timeout de seguridad)
+        const loadSlideIframes = (slideIndex) => {
+            const slides = carousel.querySelectorAll('.carousel-item');
+            if (!slides[slideIndex]) return Promise.resolve();
+            
+            const pendingIframes = slides[slideIndex].querySelectorAll('iframe[data-src]');
+            if (pendingIframes.length === 0) return Promise.resolve();
+
+            const loadPromises = [];
+
+            pendingIframes.forEach(iframe => {
+                const promise = new Promise(resolve => {
+                    iframe.addEventListener('load', () => {
+                        const container = iframe.closest('.carousel-card-iframe, .model-card');
+                        if (container) container.classList.add('iframe-loaded');
+                        resolve();
+                    }, { once: true });
+
+                    // Timeout de seguridad: si no carga en 12s, seguimos
+                    setTimeout(resolve, 12000);
+                });
+
+                iframe.src = iframe.dataset.src;
+                iframe.removeAttribute('data-src');
+                loadPromises.push(promise);
+            });
+
+            return Promise.all(loadPromises);
+        };
+
+        // Precarga el slide siguiente (sin mostrarlo)
+        const prefetchNextSlide = (currentIndex) => {
+            const nextIndex = (currentIndex + 1) % totalSlides;
+            loadSlideIframes(nextIndex);
+        };
+
+        // Al llegar a un slide pesado: pausar auto-play, esperar carga, reanudar
+        carousel.addEventListener('slid.bs.carousel', (event) => {
+            const currentIndex = event.to;
+
+            if (isHeavySlide(currentIndex)) {
+                bsCarousel.pause();
+
+                loadSlideIframes(currentIndex).then(() => {
+                    // Dar 3s extra para que el usuario vea el modelo cargado
+                    setTimeout(() => {
+                        prefetchNextSlide(currentIndex);
+                        bsCarousel.cycle();
+                    }, 3000);
+                });
+            } else {
+                // Slide ligero: precargar el siguiente en segundo plano
+                prefetchNextSlide(currentIndex);
+            }
+        });
+
+        // Precargar iframes al navegar manualmente (flechas / dots)
+        carousel.addEventListener('slide.bs.carousel', (event) => {
+            loadSlideIframes(event.to);
+        });
+
+        // Cargar iframes del slide activo cuando la sección entra en viewport
         const portfolioSection = document.getElementById('portfolio');
         if (portfolioSection) {
             const sectionObserver = new IntersectionObserver((entries) => {
@@ -246,17 +302,14 @@ window.addEventListener('DOMContentLoaded', event => {
                         const activeSlide = carousel.querySelector('.carousel-item.active');
                         const activeIndex = [...carousel.querySelectorAll('.carousel-item')].indexOf(activeSlide);
                         loadSlideIframes(activeIndex);
+                        // Precargar el siguiente desde el inicio
+                        prefetchNextSlide(activeIndex);
                         sectionObserver.unobserve(entry.target);
                     }
                 });
             }, { rootMargin: '300px' });
             sectionObserver.observe(portfolioSection);
         }
-
-        // Cargar iframes cuando se navega a un slide
-        carousel.addEventListener('slide.bs.carousel', (event) => {
-            loadSlideIframes(event.to);
-        });
     };
 
     // ===================================
