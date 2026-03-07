@@ -12905,9 +12905,11 @@ html {
 
 /* Iframe dentro de cards */
 .carousel-card-iframe {
+    position: relative;
     aspect-ratio: 4/3;
     overflow: hidden;
     border-radius: 12px 12px 0 0;
+    background: #2a4255;
 }
 
 .carousel-card-iframe iframe {
@@ -12943,6 +12945,54 @@ html {
 /* Cards de modelos 3D */
 .model-card a {
     position: relative;
+}
+
+/* Spinner de carga para iframes de modelos 3D */
+.model-card a::before,
+.carousel-card-iframe::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    border: 4px solid rgba(255, 200, 0, 0.2);
+    border-top: 4px solid #ffc800;
+    border-radius: 50%;
+    animation: iframeSpinner 0.8s linear infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.model-card a::after,
+.carousel-card-iframe::after {
+    content: 'Cargando modelo...';
+    position: absolute;
+    top: calc(50% + 40px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: #6c757d;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.carousel-card-iframe::after {
+    content: 'Cargando...';
+}
+
+/* Ocultar spinner cuando el iframe ya cargó */
+.model-card.iframe-loaded a::before,
+.model-card.iframe-loaded a::after,
+.carousel-card-iframe.iframe-loaded::before,
+.carousel-card-iframe.iframe-loaded::after {
+    display: none;
+}
+
+@keyframes iframeSpinner {
+    to { transform: rotate(360deg); }
 }
 
 .model-card iframe {

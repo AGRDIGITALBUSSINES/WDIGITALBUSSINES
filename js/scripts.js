@@ -199,20 +199,64 @@ window.addEventListener('DOMContentLoaded', event => {
     // ===================================
     
     const lazyLoadIframes = () => {
-        const iframes = document.querySelectorAll('iframe[data-src]');
+        // 1. IntersectionObserver para iframes fuera del carrusel
+        const standaloneIframes = document.querySelectorAll('iframe[data-src]:not(#portfolioCarousel iframe)');
         
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const iframe = entry.target;
-                    iframe.src = iframe.dataset.src;
-                    iframe.removeAttribute('data-src');
-                    observer.unobserve(iframe);
-                }
-            });
-        }, { rootMargin: '100px' });
+        if (standaloneIframes.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const iframe = entry.target;
+                        iframe.src = iframe.dataset.src;
+                        iframe.removeAttribute('data-src');
+                        observer.unobserve(iframe);
+                    }
+                });
+            }, { rootMargin: '200px' });
 
-        iframes.forEach(iframe => observer.observe(iframe));
+            standaloneIframes.forEach(iframe => observer.observe(iframe));
+        }
+
+        // 2. Carga diferida por evento de carrusel (para modelos 3D e iframes pesados)
+        const carousel = document.getElementById('portfolioCarousel');
+        if (!carousel) return;
+
+        const loadSlideIframes = (slideIndex) => {
+            const slides = carousel.querySelectorAll('.carousel-item');
+            if (!slides[slideIndex]) return;
+            
+            const iframes = slides[slideIndex].querySelectorAll('iframe[data-src]');
+            iframes.forEach(iframe => {
+                iframe.src = iframe.dataset.src;
+                iframe.removeAttribute('data-src');
+                // Ocultar spinner cuando el iframe termine de cargar
+                iframe.addEventListener('load', () => {
+                    const container = iframe.closest('.carousel-card-iframe, .model-card');
+                    if (container) container.classList.add('iframe-loaded');
+                }, { once: true });
+            });
+        };
+
+        // Cargar iframes del slide activo al inicio (si la sección es visible)
+        const portfolioSection = document.getElementById('portfolio');
+        if (portfolioSection) {
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const activeSlide = carousel.querySelector('.carousel-item.active');
+                        const activeIndex = [...carousel.querySelectorAll('.carousel-item')].indexOf(activeSlide);
+                        loadSlideIframes(activeIndex);
+                        sectionObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '300px' });
+            sectionObserver.observe(portfolioSection);
+        }
+
+        // Cargar iframes cuando se navega a un slide
+        carousel.addEventListener('slide.bs.carousel', (event) => {
+            loadSlideIframes(event.to);
+        });
     };
 
     // ===================================
