@@ -174,8 +174,8 @@ window.addEventListener('DOMContentLoaded', event => {
             bottom: 20px;
             right: 20px;
             padding: 15px 20px;
-            background: ${type === 'success' ? 'linear-gradient(135deg, #198754, #20c997)' : 'linear-gradient(135deg, #ffc800, #ff9500)'};
-            color: ${type === 'success' ? 'white' : 'black'};
+            background: ${type === 'success' ? 'linear-gradient(135deg, #198754, #20c997)' : 'linear-gradient(135deg, #00d4ff, #0099cc)'};
+            color: ${type === 'success' ? 'white' : '#1a2e3f'};
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             display: flex;
