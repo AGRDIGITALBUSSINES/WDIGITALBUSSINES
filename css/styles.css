@@ -11367,8 +11367,38 @@ p {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   letter-spacing: 0.0625em;
-  text-transform: uppercase;
+  text-transform: none;
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  transition: all 0.3s ease;
 }
+
+#mainNav .navbar-brand:hover {
+  text-decoration: none;
+  filter: brightness(1.15);
+  transform: scale(1.03);
+}
+
+#mainNav .navbar-brand .brand-agr {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+#mainNav .navbar-brand .brand-db {
+  font-family: "Playfair Display", "Georgia", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
+  color: #00d4ff;
+}
+
 #mainNav .navbar-brand img {
   height: 1.5rem;
 }
@@ -11392,7 +11422,7 @@ p {
   }
   #mainNav .navbar-brand {
     font-size: 1.5em;
-    transition: font-size 0.3s ease-in-out;
+    transition: font-size 0.3s ease-in-out, transform 0.3s ease;
   }
   #mainNav .navbar-brand img {
     height: 2rem;
@@ -11404,7 +11434,7 @@ p {
     background-color: #1a2e3f;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    font-size: 1.25em;
+    font-size: 1.15em;
   }
   #mainNav.navbar-shrink .navbar-brand svg,
 #mainNav.navbar-shrink .navbar-brand img {
@@ -12317,14 +12347,13 @@ html {
     left: 100%;
 }
 
-/* Animación para el logo del navbar */
-.navbar-brand img {
+/* Animación para el brand del navbar */
+.navbar-brand {
     transition: var(--transition-smooth);
 }
 
-.navbar-brand:hover img {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+.navbar-brand:hover {
+    text-decoration: none;
 }
 
 /* Mejoras de accesibilidad */
@@ -12543,6 +12572,17 @@ html {
         width: 50px;
         height: 50px;
         font-size: 18px;
+    }
+}
+
+/* Responsivo para navbar brand text */
+@media (max-width: 400px) {
+    #mainNav .navbar-brand .brand-agr {
+        font-size: 1.1em;
+        letter-spacing: 1px;
+    }
+    #mainNav .navbar-brand .brand-db {
+        font-size: 0.85em;
     }
 }
 
