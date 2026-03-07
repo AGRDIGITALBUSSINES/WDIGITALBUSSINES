@@ -411,7 +411,7 @@
                 <div class="row justify-content-center mt-5">
                     <div class="col-lg-8">
                         <div class="contact-card">
-                            <form id="contactForm" action="https://formspree.io/f/xbdapqzl" method="POST">
+                            <form id="contactForm" action="https://formspree.io/f/xbdapqzl" method="POST" novalidate>
                                 <!-- Campo anti-spam (honeypot) - no borrar -->
                                 <input type="text" name="_gotcha" style="display:none">
                                 <!-- Redirección después del envío -->
@@ -419,26 +419,63 @@
                                 <!-- Asunto del email -->
                                 <input type="hidden" name="_subject" value="Nuevo mensaje desde AGRDB Web">
                                 
-                                <div class="form-floating mb-4">
-                                    <input class="form-control" id="name" name="name" type="text" placeholder="Tu nombre" required />
-                                    <label for="name">Nombre</label>
+                                <div class="contact-field mb-4">
+                                    <div class="contact-field-icon">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="contact-field-input">
+                                        <input class="form-control" id="name" name="name" type="text" placeholder=" " required />
+                                        <label for="name">Nombre completo</label>
+                                        <span class="contact-field-status"></span>
+                                    </div>
                                 </div>
-                                <div class="form-floating mb-4">
-                                    <input class="form-control" id="email" name="email" type="email" placeholder="nombre@ejemplo.com" required />
-                                    <label for="email">Correo electrónico</label>
+                                <div class="contact-field mb-4">
+                                    <div class="contact-field-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-field-input">
+                                        <input class="form-control" id="email" name="email" type="email" placeholder=" " required />
+                                        <label for="email">Correo electrónico</label>
+                                        <span class="contact-field-status"></span>
+                                    </div>
                                 </div>
-                                <div class="form-floating mb-4">
-                                    <input class="form-control" id="subject" name="subject" type="text" placeholder="Asunto" />
-                                    <label for="subject">Asunto</label>
+                                <div class="contact-field mb-4">
+                                    <div class="contact-field-icon">
+                                        <i class="fas fa-tag"></i>
+                                    </div>
+                                    <div class="contact-field-input">
+                                        <input class="form-control" id="subject" name="subject" type="text" placeholder=" " />
+                                        <label for="subject">Asunto (opcional)</label>
+                                        <span class="contact-field-status"></span>
+                                    </div>
                                 </div>
-                                <div class="form-floating mb-4">
-                                    <textarea class="form-control" id="message" name="message" placeholder="Escribe tu mensaje aquí..." style="height: 150px" required></textarea>
-                                    <label for="message">Mensaje</label>
+                                <div class="contact-field mb-4">
+                                    <div class="contact-field-icon" style="align-self: flex-start; margin-top: 18px;">
+                                        <i class="fas fa-comment-dots"></i>
+                                    </div>
+                                    <div class="contact-field-input">
+                                        <textarea class="form-control" id="message" name="message" placeholder=" " style="height: 150px" required></textarea>
+                                        <label for="message">Tu mensaje</label>
+                                        <span class="contact-field-status"></span>
+                                    </div>
                                 </div>
                                 <div class="d-grid">
-                                    <button class="btn btn-primary btn-xl text-uppercase" type="submit">Enviar mensaje</button>
+                                    <button class="btn btn-primary btn-xl text-uppercase contact-submit-btn" id="contactSubmitBtn" type="submit">
+                                        <span class="btn-text">Enviar mensaje <i class="fas fa-paper-plane ms-2"></i></span>
+                                        <span class="btn-loading" style="display:none"><i class="fas fa-spinner fa-spin me-2"></i>Enviando...</span>
+                                        <span class="btn-success-msg" style="display:none"><i class="fas fa-check-circle me-2"></i>¡Enviado!</span>
+                                    </button>
                                 </div>
                             </form>
+                            <!-- Mensaje post-envío -->
+                            <div id="contactSuccess" class="contact-success-overlay" style="display:none">
+                                <div class="contact-success-content">
+                                    <i class="fas fa-check-circle"></i>
+                                    <h4>¡Mensaje enviado!</h4>
+                                    <p>Gracias por contactarme. Te responderé lo antes posible.</p>
+                                    <button class="btn btn-outline-light btn-sm mt-3" onclick="resetContactForm()">Enviar otro mensaje</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -141,22 +141,142 @@ window.addEventListener('DOMContentLoaded', event => {
     
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
+
+        // --- Validación en tiempo real ---
+        const validators = {
+            name: (val) => val.trim().length >= 2 ? '' : 'Ingresa tu nombre (mínimo 2 caracteres)',
+            email: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val) ? '' : 'Ingresa un correo electrónico válido',
+            subject: () => '', // Opcional, siempre válido
+            message: (val) => val.trim().length >= 10 ? '' : 'Escribe al menos 10 caracteres'
+        };
+
+        const fields = contactForm.querySelectorAll('.contact-field');
+        fields.forEach(field => {
+            const input = field.querySelector('.form-control');
+            if (!input) return;
+
+            // Validar al perder foco
+            input.addEventListener('blur', () => validateField(field, input));
+            // Limpiar error al escribir
+            input.addEventListener('input', () => {
+                if (field.classList.contains('is-invalid')) {
+                    validateField(field, input);
+                }
+            });
+        });
+
+        function validateField(field, input) {
+            const name = input.id;
+            const validate = validators[name];
+            if (!validate) return true;
+
+            const error = validate(input.value);
+            const errorEl = field.querySelector('.contact-field-error');
+            
+            field.classList.remove('is-valid', 'is-invalid');
+            
+            if (error) {
+                field.classList.add('is-invalid');
+                if (!errorEl) {
+                    const div = document.createElement('div');
+                    div.className = 'contact-field-error';
+                    div.textContent = error;
+                    field.appendChild(div);
+                } else {
+                    errorEl.textContent = error;
+                }
+                return false;
+            } else if (input.value.trim().length > 0) {
+                field.classList.add('is-valid');
+                if (errorEl) errorEl.remove();
+                return true;
+            } else {
+                if (errorEl) errorEl.remove();
+                return !input.required;
+            }
+        }
+
+        function validateAllFields() {
+            let allValid = true;
+            fields.forEach(field => {
+                const input = field.querySelector('.form-control');
+                if (input && !validateField(field, input)) {
+                    allValid = false;
+                }
+            });
+            return allValid;
+        }
+
+        // --- Envío AJAX con Formspree ---
         contactForm.addEventListener('submit', function(e) {
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Mostrar estado de carga
-            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Enviando...';
+            e.preventDefault();
+
+            if (!validateAllFields()) {
+                // Hacer scroll al primer campo con error
+                const firstError = contactForm.querySelector('.is-invalid .form-control');
+                if (firstError) firstError.focus();
+                return;
+            }
+
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            const btnSuccess = submitBtn.querySelector('.btn-success-msg');
+
+            // Estado de carga
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
             submitBtn.disabled = true;
-            
-            // El formulario se enviará normalmente a Formspree
-            // Restaurar botón después de un tiempo (por si hay error)
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
+
+            const formData = new FormData(this);
+
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Éxito: mostrar overlay
+                    btnLoading.style.display = 'none';
+                    btnSuccess.style.display = 'inline';
+                    
+                    setTimeout(() => {
+                        document.getElementById('contactSuccess').style.display = 'flex';
+                    }, 600);
+                    
+                    showNotification('¡Mensaje enviado correctamente!', 'success');
+                } else {
+                    throw new Error('Error al enviar');
+                }
+            })
+            .catch(() => {
+                btnLoading.style.display = 'none';
+                btnText.style.display = 'inline';
                 submitBtn.disabled = false;
-            }, 5000);
+                showNotification('Hubo un error al enviar. Intenta de nuevo.', 'error');
+            });
         });
     }
+
+    // Reset del formulario de contacto
+    window.resetContactForm = function() {
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.reset();
+            form.querySelectorAll('.contact-field').forEach(f => {
+                f.classList.remove('is-valid', 'is-invalid');
+                const errEl = f.querySelector('.contact-field-error');
+                if (errEl) errEl.remove();
+            });
+            const submitBtn = document.getElementById('contactSubmitBtn');
+            submitBtn.querySelector('.btn-text').style.display = 'inline';
+            submitBtn.querySelector('.btn-loading').style.display = 'none';
+            submitBtn.querySelector('.btn-success-msg').style.display = 'none';
+            submitBtn.disabled = false;
+        }
+        document.getElementById('contactSuccess').style.display = 'none';
+    };
 
     // ===================================
     // SISTEMA DE NOTIFICACIONES

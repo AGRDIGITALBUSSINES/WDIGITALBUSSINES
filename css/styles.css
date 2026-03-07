@@ -12743,33 +12743,170 @@ html {
     background: linear-gradient(90deg, #00d4ff 0%, #0088bb 100%);
 }
 
-.contact-card .form-control {
-    border: 2px solid #e9ecef;
-    border-radius: 12px;
-    padding: 15px 20px;
-    font-size: 1rem;
+/* === Nuevo sistema de campos con iconos === */
+
+.contact-field {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    position: relative;
+}
+
+.contact-field-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: white;
+    border-radius: 12px 0 0 12px;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.contact-field-input {
+    flex: 1;
+    position: relative;
+}
+
+.contact-field-input .form-control {
+    border: 2px solid #e0e5ec;
+    border-left: none;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 45px 16px 18px;
+    font-size: 1rem;
     background: #f8f9fa;
+    transition: all 0.3s ease;
+    height: auto;
+    min-height: 52px;
 }
 
-.contact-card .form-control:focus {
+.contact-field-input textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-field-input .form-control:focus {
     border-color: #00d4ff;
-    box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.15);
-    background: white;
+    box-shadow: 0 0 0 4px rgba(0, 212, 255, 0.12);
+    background: #fff;
+    outline: none;
 }
 
-.contact-card .form-floating label {
-    padding: 15px 20px;
-    color: #6c757d;
+.contact-field:focus-within .contact-field-icon {
+    background: linear-gradient(135deg, #0099cc 0%, #007a94 100%);
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
 }
 
-.contact-card .form-floating > .form-control:focus ~ label,
-.contact-card .form-floating > .form-control:not(:placeholder-shown) ~ label {
-    transform: scale(0.85) translateY(-0.75rem) translateX(0.15rem);
+/* Label flotante personalizado */
+.contact-field-input label {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+    color: #8a94a6;
+    font-size: 1rem;
+    font-weight: 500;
+    pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    padding: 0 4px;
+    z-index: 1;
+}
+
+/* Label para textarea (arriba) */
+.contact-field-input textarea ~ label {
+    top: 20px;
+    transform: translateY(0);
+}
+
+.contact-field-input .form-control:focus ~ label,
+.contact-field-input .form-control:not(:placeholder-shown) ~ label {
+    top: -10px;
+    left: 12px;
+    font-size: 0.78rem;
     color: #0098b3;
+    background: white;
+    padding: 0 6px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 
-.contact-card .btn-primary {
+/* Indicador de estado (check / error) */
+.contact-field-status {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.contact-field-input textarea ~ .contact-field-status {
+    top: 20px;
+    transform: none;
+}
+
+.contact-field.is-valid .contact-field-status::before {
+    content: '\f058';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #198754;
+}
+
+.contact-field.is-valid .contact-field-status {
+    opacity: 1;
+}
+
+.contact-field.is-valid .contact-field-input .form-control {
+    border-color: #198754;
+}
+
+.contact-field.is-valid .contact-field-icon {
+    background: linear-gradient(135deg, #198754 0%, #20c997 100%);
+}
+
+.contact-field.is-invalid .contact-field-status::before {
+    content: '\f06a';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: #dc3545;
+}
+
+.contact-field.is-invalid .contact-field-status {
+    opacity: 1;
+}
+
+.contact-field.is-invalid .contact-field-input .form-control {
+    border-color: #dc3545;
+}
+
+.contact-field.is-invalid .contact-field-icon {
+    background: linear-gradient(135deg, #dc3545 0%, #e85d6e 100%);
+}
+
+/* Error message debajo del campo */
+.contact-field-error {
+    display: none;
+    font-size: 0.8rem;
+    color: #dc3545;
+    margin-top: 4px;
+    margin-left: 52px;
+    padding-left: 6px;
+    animation: fadeInDown 0.3s ease;
+}
+
+.contact-field.is-invalid .contact-field-error {
+    display: block;
+}
+
+/* === Botón submit mejorado === */
+
+.contact-submit-btn {
     background: linear-gradient(135deg, #00d4ff 0%, #0088bb 100%);
     border: none;
     border-radius: 12px;
@@ -12777,13 +12914,134 @@ html {
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 1px;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-card .btn-primary:hover {
+.contact-submit-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: width 0.6s ease, height 0.6s ease, top 0.6s ease, left 0.6s ease;
+    transform: translate(-50%, -50%);
+}
+
+.contact-submit-btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.contact-submit-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+}
+
+.contact-submit-btn:active {
+    transform: translateY(-1px);
+}
+
+.contact-submit-btn .fa-paper-plane {
+    transition: transform 0.3s ease;
+}
+
+.contact-submit-btn:hover .fa-paper-plane {
+    transform: translateX(4px) translateY(-2px);
+}
+
+/* === Overlay de éxito post-envío === */
+
+.contact-success-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00d4ff 0%, #0088bb 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    animation: fadeInScale 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-success-content {
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+.contact-success-content .fa-check-circle {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: successBounce 0.6s ease 0.2s both;
+}
+
+.contact-success-content h4 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.contact-success-content p {
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes successBounce {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive ajustes */
+@media (max-width: 576px) {
+    .contact-card {
+        padding: 30px 20px;
+    }
+    .contact-field-icon {
+        width: 44px;
+        min-width: 44px;
+        height: 44px;
+        font-size: 0.95rem;
+    }
+    .contact-field-input .form-control {
+        padding: 14px 40px 14px 14px;
+        min-height: 44px;
+    }
+    .contact-field-input label {
+        font-size: 0.9rem;
+    }
+    .contact-submit-btn {
+        padding: 15px 30px;
+        font-size: 0.9rem;
+    }
+    .contact-field-error {
+        margin-left: 44px;
+    }
 }
 
 .contact-info {
