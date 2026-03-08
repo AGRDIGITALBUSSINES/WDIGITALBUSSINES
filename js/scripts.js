@@ -1,6 +1,6 @@
 /*!
- * AGRDB Modern Scripts
- * Basado en Start Bootstrap Agency con mejoras modernas tipo Lovable
+ * AGR Digital Building - Scripts
+ * Portfolio BIM profesional
  */
 
 window.addEventListener('DOMContentLoaded', event => {
@@ -74,30 +74,6 @@ window.addEventListener('DOMContentLoaded', event => {
             el.classList.add('animate-on-scroll', 'fade-up');
             el.classList.add(`delay-${(i + 1) * 100}`);
         });
-
-        // Portfolio items
-        document.querySelectorAll('.portfolio-item').forEach((el, i) => {
-            el.classList.add('animate-on-scroll', 'scale-in');
-            el.classList.add(`delay-${(i % 3 + 1) * 100}`);
-        });
-
-        // Videos
-        document.querySelectorAll('#video .team-menber').forEach((el, i) => {
-            el.classList.add('animate-on-scroll', 'fade-up');
-            el.classList.add(`delay-${(i + 1) * 100}`);
-        });
-
-        // Modelos 3D
-        document.querySelectorAll('#models .team-menber').forEach((el, i) => {
-            el.classList.add('animate-on-scroll', 'fade-up');
-            el.classList.add(`delay-${(i + 1) * 100}`);
-        });
-
-        // Sección About
-        const teamMember = document.querySelector('.team-member');
-        if (teamMember) {
-            teamMember.classList.add('animate-on-scroll', 'scale-in');
-        }
 
         // Formulario de contacto
         const contactForm = document.querySelector('#contactForm');
@@ -447,27 +423,6 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
     // ===================================
-    // CONTADOR ANIMADO (para estadísticas futuras)
-    // ===================================
-    
-    window.animateCounter = (element, target, duration = 2000) => {
-        let start = 0;
-        const increment = target / (duration / 16);
-        
-        const updateCounter = () => {
-            start += increment;
-            if (start < target) {
-                element.textContent = Math.floor(start);
-                requestAnimationFrame(updateCounter);
-            } else {
-                element.textContent = target;
-            }
-        };
-        
-        updateCounter();
-    };
-
-    // ===================================
     // PORTFOLIO CARRUSEL - Indicadores
     // ===================================
     
@@ -595,5 +550,5 @@ window.addEventListener('DOMContentLoaded', event => {
     // Agregar clase loaded al body cuando todo esté cargado
     document.body.classList.add('loaded');
 
-    console.log('🚀 AGRDB Modern Scripts loaded successfully!');
+    console.log('AGR Digital Building loaded');
 });
