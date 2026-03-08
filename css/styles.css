@@ -12661,6 +12661,186 @@ html {
 }
 
 /* ===========================================
+   BROCHURE DOWNLOAD CTA
+   =========================================== */
+
+.brochure-cta {
+    margin-top: 3rem;
+}
+
+.brochure-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background: linear-gradient(135deg, #1a2e3f 0%, #15253a 100%);
+    border-radius: 20px;
+    padding: 32px 40px;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.brochure-cta-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4ff 0%, #0099cc 50%, #00d4ff 100%);
+}
+
+.brochure-cta-inner::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.brochure-cta-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.brochure-cta-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.brochure-cta-text {
+    text-align: left;
+    flex: 1;
+    min-width: 200px;
+}
+
+.brochure-cta-text h5 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.brochure-cta-text p {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.btn-brochure {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(0, 212, 255, 0.3);
+    white-space: nowrap;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-brochure:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 212, 255, 0.45);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-brochure:active {
+    transform: translateY(-1px);
+}
+
+.btn-brochure .fa-download {
+    transition: transform 0.3s ease;
+}
+
+.btn-brochure:hover .fa-download {
+    transform: translateY(2px);
+    animation: downloadBounce 0.6s ease;
+}
+
+@keyframes downloadBounce {
+    0%, 100% { transform: translateY(0); }
+    40% { transform: translateY(4px); }
+    70% { transform: translateY(-1px); }
+}
+
+/* Masthead brochure link */
+.btn-masthead-brochure {
+    display: inline-flex;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-masthead-brochure:hover {
+    color: #00d4ff;
+    border-color: rgba(0, 212, 255, 0.5);
+    background: rgba(0, 212, 255, 0.1);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.btn-masthead-brochure i {
+    color: #00d4ff;
+    font-size: 0.95rem;
+}
+
+/* Responsive brochure */
+@media (max-width: 768px) {
+    .brochure-cta-inner {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 24px;
+        gap: 16px;
+    }
+    .brochure-cta-text {
+        text-align: center;
+    }
+    .brochure-cta-text h5 {
+        font-size: 1rem;
+    }
+    .btn-brochure {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+}
+
+/* ===========================================
    ACERCA DE - Estilo Moderno
    =========================================== */
 
