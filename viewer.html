@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor 3D IFC - AGRDB</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo_AGRDB.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: #1a2e3f;
+            overflow: hidden;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ===== Loading Overlay ===== */
+        #loading-overlay {
+            position: fixed;
+            inset: 0;
+            background: #1a2e3f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease;
+        }
+
+        #loading-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader-spinner {
+            width: 56px;
+            height: 56px;
+            border: 4px solid rgba(0, 212, 255, 0.15);
+            border-top-color: #00d4ff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin-bottom: 24px;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        #loading-text {
+            color: #8a9bae;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .progress-container {
+            width: 220px;
+            height: 4px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        #progress-bar {
+            height: 100%;
+            background: #00d4ff;
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        /* ===== Error Overlay ===== */
+        #error-overlay {
+            position: fixed;
+            inset: 0;
+            background: #1a2e3f;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            color: #8a9bae;
+            text-align: center;
+            padding: 30px;
+        }
+
+        #error-overlay .error-icon {
+            font-size: 48px;
+            color: #dc3545;
+            margin-bottom: 20px;
+        }
+
+        #error-overlay h2 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        #error-overlay a {
+            color: #00d4ff;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        #error-overlay a:hover { text-decoration: underline; }
+
+        /* ===== Toolbar ===== */
+        #toolbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 48px;
+            background: rgba(26, 46, 63, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.12);
+            gap: 6px;
+        }
+
+        .toolbar-btn {
+            background: none;
+            border: 1px solid rgba(0, 212, 255, 0.25);
+            color: #8a9bae;
+            padding: 5px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+
+        .toolbar-btn:hover {
+            color: #00d4ff;
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.07);
+        }
+
+        .toolbar-btn.active {
+            background: rgba(0, 212, 255, 0.12);
+            color: #00d4ff;
+            border-color: #00d4ff;
+        }
+
+        .toolbar-separator {
+            width: 1px;
+            height: 24px;
+            background: rgba(0, 212, 255, 0.12);
+            margin: 0 4px;
+        }
+
+        #model-name {
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 300px;
+        }
+
+        /* ===== Controls Hint ===== */
+        #controls-hint {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(26, 46, 63, 0.9);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(0, 212, 255, 0.15);
+            border-radius: 10px;
+            padding: 10px 20px;
+            color: #8a9bae;
+            font-size: 0.72rem;
+            display: flex;
+            gap: 20px;
+            z-index: 50;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+
+        #controls-hint.hidden { opacity: 0; }
+
+        #controls-hint span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        #controls-hint i { color: #00d4ff; font-size: 0.8rem; }
+
+        /* ===== Canvas ===== */
+        #viewer-canvas {
+            display: block;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 600px) {
+            .toolbar-btn .btn-label { display: none; }
+            #model-name { max-width: 120px; font-size: 0.72rem; }
+            #controls-hint { gap: 12px; font-size: 0.65rem; padding: 8px 14px; }
+        }
+
+        /* ===== Embed Mode ===== */
+        body.embed-mode #toolbar,
+        body.embed-mode #controls-hint { display: none !important; }
+
+        body.embed-mode #loading-overlay {
+            background: #2a4255;
+        }
+
+        body.embed-mode .loader-spinner {
+            width: 36px;
+            height: 36px;
+            border-width: 3px;
+            margin-bottom: 12px;
+        }
+
+        body.embed-mode #loading-text {
+            font-size: 0.7rem;
+        }
+
+        body.embed-mode .progress-container {
+            width: 140px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading -->
+    <div id="loading-overlay">
+        <div class="loader-spinner"></div>
+        <div id="loading-text">Inicializando visor...</div>
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Error -->
+    <div id="error-overlay">
+        <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <h2>Error al cargar el modelo</h2>
+        <p id="error-text"></p>
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+    </div>
+
+    <!-- Toolbar -->
+    <div id="toolbar">
+        <a href="index.html" class="toolbar-btn" title="Volver al inicio">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <div class="toolbar-separator"></div>
+        <button class="toolbar-btn" id="btn-reset" title="Restablecer vista">
+            <i class="fas fa-home"></i> <span class="btn-label">Vista</span>
+        </button>
+        <button class="toolbar-btn" id="btn-wireframe" title="Modo wireframe">
+            <i class="fas fa-border-all"></i> <span class="btn-label">Wireframe</span>
+        </button>
+        <button class="toolbar-btn" id="btn-grid" title="Mostrar/ocultar grilla">
+            <i class="fas fa-th"></i> <span class="btn-label">Grilla</span>
+        </button>
+        <span id="model-name"></span>
+    </div>
+
+    <!-- Controls hint -->
+    <div id="controls-hint">
+        <span><i class="fas fa-mouse-pointer"></i> Rotar: Click + arrastrar</span>
+        <span><i class="fas fa-search-plus"></i> Zoom: Scroll</span>
+        <span><i class="fas fa-arrows-alt"></i> Mover: Click derecho</span>
+    </div>
+
+    <!-- 3D Canvas -->
+    <canvas id="viewer-canvas"></canvas>
+
+    <!-- Three.js via importmap -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/ifc-viewer.js"></script>
+</body>
+</html>
