@@ -204,6 +204,12 @@ window.addEventListener('DOMContentLoaded', event => {
             btnLoading.style.display = 'inline';
             submitBtn.disabled = true;
 
+            // Actualizar _subject con el asunto del usuario (si lo escribió)
+            const userSubject = document.getElementById('subject').value.trim();
+            if (userSubject) {
+                this.querySelector('[name="_subject"]').value = userSubject;
+            }
+
             const formData = new FormData(this);
 
             fetch(this.action, {
