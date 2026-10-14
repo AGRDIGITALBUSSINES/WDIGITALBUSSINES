@@ -120,8 +120,8 @@ window.addEventListener('DOMContentLoaded', event => {
 
         // --- Validación en tiempo real ---
         const validators = {
-            name: (val) => val.trim().length >= 2 ? '' : 'Ingresa tu nombre (mínimo 2 caracteres)',
-            email: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val) ? '' : 'Ingresa un correo electrónico válido',
+            name: (val) => val.trim().length >= 2 ? '' : 'Please enter your name (at least 2 characters)',
+            email: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val) ? '' : 'Please enter a valid email address',
             subject: () => '', // Opcional, siempre válido
             message: (val) => val.trim().length >= 10 ? '' : 'Escribe al menos 10 caracteres'
         };
@@ -227,16 +227,16 @@ window.addEventListener('DOMContentLoaded', event => {
                         document.getElementById('contactSuccess').style.display = 'flex';
                     }, 600);
                     
-                    showNotification('¡Mensaje enviado correctamente!', 'success');
+                    showNotification('Message sent successfully!', 'success');
                 } else {
-                    throw new Error('Error al enviar');
+                    throw new Error('Send failed');
                 }
             })
             .catch(() => {
                 btnLoading.style.display = 'none';
                 btnText.style.display = 'inline';
                 submitBtn.disabled = false;
-                showNotification('Hubo un error al enviar. Intenta de nuevo.', 'error');
+                showNotification('Something went wrong. Please try again.', 'error');
             });
         });
     }

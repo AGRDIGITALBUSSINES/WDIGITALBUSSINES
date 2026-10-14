@@ -115,7 +115,7 @@ class IFCViewer {
 
     async loadIFC(url, onStatus, onProgress, cameraAngle) {
         // 1. Load web-ifc WASM engine
-        onStatus?.('Cargando motor IFC (WASM)...');
+        onStatus?.('Loading IFC engine (WASM)...');
         onProgress?.(5);
 
         const WebIFC = await this._loadWebIFC();
@@ -127,13 +127,13 @@ class IFCViewer {
         onProgress?.(20);
 
         // 2. Download IFC file
-        onStatus?.('Descargando modelo...');
+        onStatus?.('Downloading model...');
         const buffer = await this._fetchWithProgress(url, (pct) => {
             onProgress?.(20 + pct * 45); // 20% → 65%
         });
 
         // 3. Parse IFC geometry
-        onStatus?.('Procesando geometría...');
+        onStatus?.('Processing geometry...');
         onProgress?.(68);
 
         const data = new Uint8Array(buffer);
@@ -154,7 +154,7 @@ class IFCViewer {
 
         this.ifcAPI.CloseModel(modelID);
 
-        onStatus?.(`Modelo cargado · ${meshCount} elementos`);
+        onStatus?.(`Model loaded · ${meshCount} elements`);
         onProgress?.(92);
 
         // 4. Fit camera to model bounds with custom angle
@@ -192,7 +192,7 @@ class IFCViewer {
         const response = await fetch(url);
 
         if (!response.ok) {
-            throw new Error(`Error HTTP ${response.status}: No se pudo descargar el modelo`);
+            throw new Error(`HTTP error ${response.status}: could not download the model`);
         }
 
         const contentLength = response.headers.get('Content-Length');
@@ -402,7 +402,7 @@ async function init() {
 
     if (!modelUrl) {
         errorOverlay.style.display = 'flex';
-        errorText.textContent = 'No se especificó ningún modelo. Formato: viewer.html#Models/archivo.ifc';
+        errorText.textContent = 'No model specified. Format: viewer.html#Models/file.ifc';
         loadingOverlay.classList.add('hidden');
         return;
     }
@@ -457,9 +457,9 @@ async function init() {
         }
 
     } catch (err) {
-        console.error('Error cargando modelo IFC:', err);
+        console.error('Error loading IFC model:', err);
         errorOverlay.style.display = 'flex';
-        errorText.textContent = err.message || 'Error desconocido al cargar el modelo IFC.';
+        errorText.textContent = err.message || 'Unknown error while loading the IFC model.';
         loadingOverlay.classList.add('hidden');
         return;
     }

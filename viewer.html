@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visor 3D IFC - AGRDB</title>
+    <title>IFC 3D Viewer - AGRDB</title>
     <link rel="icon" type="image/x-icon" href="assets/logo_AGRDB.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
@@ -242,7 +242,7 @@
     <!-- Loading -->
     <div id="loading-overlay">
         <div class="loader-spinner"></div>
-        <div id="loading-text">Inicializando visor...</div>
+        <div id="loading-text">Initializing viewer...</div>
         <div class="progress-container">
             <div id="progress-bar"></div>
         </div>
@@ -251,34 +251,34 @@
     <!-- Error -->
     <div id="error-overlay">
         <div class="error-icon"><i class="fas fa-exclamation-triangle"></i></div>
-        <h2>Error al cargar el modelo</h2>
+        <h2>Could not load the model</h2>
         <p id="error-text"></p>
-        <a href="index.html"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to home</a>
     </div>
 
     <!-- Toolbar -->
     <div id="toolbar">
-        <a href="index.html" class="toolbar-btn" title="Volver al inicio">
+        <a href="index.html" class="toolbar-btn" title="Back to home">
             <i class="fas fa-arrow-left"></i>
         </a>
         <div class="toolbar-separator"></div>
-        <button class="toolbar-btn" id="btn-reset" title="Restablecer vista">
-            <i class="fas fa-home"></i> <span class="btn-label">Vista</span>
+        <button class="toolbar-btn" id="btn-reset" title="Reset view">
+            <i class="fas fa-home"></i> <span class="btn-label">View</span>
         </button>
-        <button class="toolbar-btn" id="btn-wireframe" title="Modo wireframe">
+        <button class="toolbar-btn" id="btn-wireframe" title="Wireframe mode">
             <i class="fas fa-border-all"></i> <span class="btn-label">Wireframe</span>
         </button>
-        <button class="toolbar-btn" id="btn-grid" title="Mostrar/ocultar grilla">
-            <i class="fas fa-th"></i> <span class="btn-label">Grilla</span>
+        <button class="toolbar-btn" id="btn-grid" title="Show/hide grid">
+            <i class="fas fa-th"></i> <span class="btn-label">Grid</span>
         </button>
         <span id="model-name"></span>
     </div>
 
     <!-- Controls hint -->
     <div id="controls-hint">
-        <span><i class="fas fa-mouse-pointer"></i> Rotar: Click + arrastrar</span>
+        <span><i class="fas fa-mouse-pointer"></i> Rotate: click + drag</span>
         <span><i class="fas fa-search-plus"></i> Zoom: Scroll</span>
-        <span><i class="fas fa-arrows-alt"></i> Mover: Click derecho</span>
+        <span><i class="fas fa-arrows-alt"></i> Pan: right-click</span>
     </div>
 
     <!-- 3D Canvas -->
