@@ -15,6 +15,8 @@
   .btn{background:rgba(27,43,60,.85);border:1px solid rgba(255,255,255,.18);color:#fff;border-radius:8px;padding:8px 12px;font:600 13px Montserrat,Arial;cursor:pointer;text-decoration:none;backdrop-filter:blur(6px)}
   .btn:hover{border-color:var(--cyan)}
   .btn.on{background:var(--cyan);border-color:var(--cyan);color:#06222b}
+  .layers .btn{padding:6px 10px;font-size:12px}
+  .layers .btn:not(.on){opacity:.55}
   .title{margin-left:auto;font-weight:700;font-size:13px;background:rgba(27,43,60,.85);padding:8px 12px;border-radius:8px}
   .info{position:fixed;left:12px;bottom:12px;max-width:420px;background:rgba(27,43,60,.88);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;font-size:12px;line-height:1.55;z-index:5}
   .info b{color:var(--cyan)}
@@ -29,13 +31,15 @@
 <div id="loading"><div class="spin"></div><div id="ltext">Loading 3D model...</div></div>
 <div class="bar">
   <a class="btn" href="index.html#portfolio">&larr; Back</a>
-  <button class="btn on" id="bTex">Textured</button>
-  <button class="btn" id="bElev">Elevation</button>
+  <span id="modeBtns"><button class="btn on" id="bTex">Textured</button>
+  <button class="btn" id="bElev">Elevation</button></span>
   <button class="btn" id="bRot">Auto-rotate</button>
   <button class="btn" id="bReset">Reset view</button>
-  <span class="title">Formwork survey · Drone photogrammetry</span>
+  <span class="title" id="ttl"></span>
 </div>
-<div class="info"><b>Scan-to-BIM · Reality capture.</b> Formwork assembly and excavation reconstructed in WebODM from 151 drone images (2.9 M-point dense cloud, 0.3 cm ground sample distance). The mesh is used to read as-built geometry before modeling in Revit and Civil 3D.</div>
+<div class="bar layers" id="layers" style="top:58px;display:none">
+</div>
+<div class="info" id="info"></div>
 <div class="hint">Drag to rotate · Scroll to zoom · Right-drag to pan</div>
 <canvas id="c"></canvas>
 <script type="importmap">
@@ -47,6 +51,20 @@ import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 
+const MODELS = {
+  formwork: { file: 'assets/models/formwork.glb', zup: true, textured: true,
+    title: 'Formwork survey · Drone photogrammetry',
+    info: '<b>Scan-to-BIM · Reality capture.</b> Formwork assembly and excavation reconstructed in WebODM from 151 drone images (2.9 M-point dense cloud, 0.3 cm ground sample distance). The mesh is used to read as-built geometry before modeling in Revit and Civil 3D.' },
+  corridor: { file: 'assets/models/corridor.glb', zup: false, textured: false, layers: true,
+    title: 'Urban road corridor · Federated model',
+    info: '<b>Infrastructure BIM · Federated model.</b> Roadway (Civil 3D), bridge, box culvert and street lighting (Revit), water main and sewer networks — exported to IFC, aligned to one coordinate system and federated for coordination. Toggle each discipline above.' }
+};
+const key = new URLSearchParams(location.search).get('m') || 'formwork';
+const CFG = MODELS[key] || MODELS.formwork;
+document.getElementById('ttl').textContent = CFG.title;
+document.getElementById('info').innerHTML = CFG.info;
+document.title = CFG.title + ' - AGRDB';
+if (!CFG.textured) document.getElementById('modeBtns').style.display = 'none';
 const canvas = document.getElementById('c');
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -54,7 +72,8 @@ renderer.setSize(innerWidth, innerHeight);
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0x1b2b3c);
-scene.add(new THREE.AmbientLight(0xffffff, 2.2));
+scene.add(new THREE.AmbientLight(0xffffff, CFG.textured ? 2.2 : 1.1));
+if (!CFG.textured) { const d = new THREE.DirectionalLight(0xffffff, 2.2); d.position.set(0.6, 1, 0.4); scene.add(d); scene.add(new THREE.HemisphereLight(0xdfe9f3, 0x3a4a5a, 0.9)); }
 const camera = new THREE.PerspectiveCamera(40, innerWidth / innerHeight, 0.05, 2000);
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
@@ -65,9 +84,9 @@ const loader = new GLTFLoader();
 loader.setDRACOLoader(draco);
 
 let model, home, texMats = [], elevMat;
-loader.load('assets/models/formwork.glb', (gltf) => {
+loader.load(CFG.file, (gltf) => {
   model = gltf.scene;
-  model.rotation.x = -Math.PI / 2;
+  if (CFG.zup) model.rotation.x = -Math.PI / 2;
   scene.add(model);
   model.updateMatrixWorld(true);
   const box = new THREE.Box3().setFromObject(model);
@@ -76,10 +95,24 @@ loader.load('assets/models/formwork.glb', (gltf) => {
   const b2 = new THREE.Box3().setFromObject(model);
   const size = b2.getSize(new THREE.Vector3());
   const r = Math.max(size.x, size.z);
-  home = { pos: new THREE.Vector3(r * 0.55, r * 0.75, r * 0.65), tgt: new THREE.Vector3(0, -size.y * 0.15, 0) };
+  home = CFG.zup ? { pos: new THREE.Vector3(r * 0.55, r * 0.75, r * 0.65), tgt: new THREE.Vector3(0, -size.y * 0.15, 0) }
+                 : { pos: new THREE.Vector3(-r * 0.62, r * 0.55, r * 0.55), tgt: new THREE.Vector3(-r * 0.05, 0, r * 0.12) };
+  camera.near = r / 2000; camera.far = r * 20; camera.updateProjectionMatrix();
+  if (CFG.layers) {
+    const box = document.getElementById('layers'); box.style.display = 'flex';
+    const colors = { Roadway: '#9fb6d9', Bridge: '#c9ced3', BoxCulvert: '#3dc2e9', Lighting: '#b6b6b6', Water: '#2f8cff', Sewer: '#d94fd9' };
+    const labels = { BoxCulvert: 'Box culvert' };
+    let L = model; while (L.children.length === 1 && !L.children[0].isMesh) L = L.children[0];
+    L.children.forEach((g) => {
+      const b = document.createElement('button'); b.className = 'btn on';
+      b.innerHTML = '<span style="display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px;background:' + (colors[g.name] || '#ccc') + '"></span>' + (labels[g.name] || g.name);
+      b.onclick = () => { g.visible = !g.visible; b.classList.toggle('on', g.visible); };
+      box.appendChild(b);
+    });
+  }
   // elevation material (vertex colors computed once)
   const minY = b2.min.y, maxY = b2.max.y;
-  model.traverse((o) => {
+  if (CFG.textured) model.traverse((o) => {
     if (!o.isMesh) return;
     o.material.side = THREE.DoubleSide;
     texMats.push([o, o.material]);
