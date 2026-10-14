@@ -73,22 +73,19 @@
       .pj-chip{border:1px solid #cfd8e0;background:#fff;color:#1b2b3c;border-radius:20px;padding:6px 16px;font:600 .85rem Montserrat,sans-serif;cursor:pointer;transition:all .2s}
       .pj-chip:hover{border-color:#00b4d8}
       .pj-chip.active{background:#00b4d8;border-color:#00b4d8;color:#fff}
-      .pj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+      .pj-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:22px}
       .pj-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.07);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
       .pj-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.12)}
-      .pj-card.pj-feat{grid-column:span 1}
-      .pj-thumb{aspect-ratio:4/3;background:#1b2b3c;overflow:hidden}
+      .pj-thumb{aspect-ratio:16/10;background:#1b2b3c;overflow:hidden}
       .pj-thumb img{width:100%;height:100%;object-fit:cover;display:block}
       .pj-body{padding:1.1rem 1.25rem 1.25rem;display:flex;flex-direction:column;flex:1}
       .pj-tag{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00b4d8;margin-bottom:.3rem}
       .pj-body h4{font-family:Montserrat,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.4rem}
-      .pj-body p{font-size:.92rem;line-height:1.55;color:#495057;flex:1;margin-bottom:.9rem}
+      .pj-body p{font-size:.92rem;line-height:1.55;color:#495057;flex:1;margin-bottom:.9rem;min-height:4.65em}
       .pj-actions{display:flex;flex-wrap:wrap;gap:8px}
       .pj-btn{font:600 .8rem Montserrat,sans-serif;color:#1b2b3c;background:#eef6f9;border-radius:6px;padding:7px 12px;text-decoration:none;transition:background .2s}
       .pj-btn:hover{background:#00b4d8;color:#fff}
       .pj-card.hide{display:none}
-      @media (min-width:992px){.pj-grid{grid-template-columns:repeat(6,1fr)}.pj-card{grid-column:span 2}.pj-card.pj-feat{grid-column:span 3}.pj-card.pj-feat .pj-thumb{aspect-ratio:16/9}}
-      @media (min-width:992px){.pj-grid.filtered .pj-card{grid-column:span 2}.pj-grid.filtered .pj-card .pj-thumb{aspect-ratio:4/3}}
       @media (max-width:991px){.pj-grid{grid-template-columns:repeat(2,1fr)}}
       @media (max-width:575px){.pj-grid{grid-template-columns:1fr}}
       .pj-modal{position:fixed;inset:0;background:rgba(10,18,26,.94);z-index:2000;display:none;align-items:center;justify-content:center;padding:56px 16px}
@@ -256,7 +253,7 @@
                     <button class="pj-chip" data-filter="data">Data</button>
                 </div>
                 <div class="pj-grid">
-                    <article class="pj-card pj-feat" data-cat="infra bimgis">
+                    <article class="pj-card" data-cat="infra bimgis">
                         <div class="pj-thumb"><img src="assets/img/projects/corridor.jpg" alt="Urban road corridor — BIM + GIS" loading="lazy" /></div>
                         <div class="pj-body">
                             <span class="pj-tag">Civil 3D · Revit · IFC · ArcGIS</span>
@@ -265,7 +262,7 @@
                             <div class="pj-actions"><a class="pj-btn" href="#" data-video="assets/video/bim-gis-corridor.mp4"><i class="fas fa-play me-1"></i>Watch BIM-GIS video</a><a class="pj-btn" href="#" data-gallery="assets/img/projects/gis-study.jpg|Study area &amp; affected lots,assets/img/projects/gis-hazard.jpg|Flood &amp; landslide hazard,assets/img/projects/gis-slope.jpg|Terrain slope analysis"><i class="fas fa-map me-1"></i>GIS studies</a></div>
                         </div>
                     </article>
-                    <article class="pj-card pj-feat" data-cat="scan">
+                    <article class="pj-card" data-cat="scan">
                         <div class="pj-thumb"><img src="assets/img/projects/formwork-scan.jpg" alt="Formwork survey — Scan-to-BIM" loading="lazy" /></div>
                         <div class="pj-body">
                             <span class="pj-tag">WebODM · Reality capture</span>
@@ -335,15 +332,6 @@
                             <h4>Project dashboard</h4>
                             <p>Interactive report with quantities, percentages and a map view for project monitoring.</p>
                             <div class="pj-actions"><a class="pj-btn" href="https://app.powerbi.com/view?r=eyJrIjoiOGE3NDRhZjYtMDNmNS00NDQ4LThkMzctYjFiYzI0ODUyNTA5IiwidCI6IjE2YjQ4NGIzLTQ2YzgtNDQ3YS1iMWFhLWFhMTYzNWYyY2I2YiJ9" target="_blank" rel="noopener"><i class="fas fa-chart-bar me-1"></i>Open dashboard</a></div>
-                        </div>
-                    </article>
-                    <article class="pj-card" data-cat="data bimgis">
-                        <div class="pj-thumb"><img src="assets/img/projects/ndvi.jpg" alt="NDVI analysis" loading="lazy" /></div>
-                        <div class="pj-body">
-                            <span class="pj-tag">ArcGIS · QGIS</span>
-                            <h4>NDVI vegetation analysis</h4>
-                            <p>Vegetation index mapped from satellite imagery for Bogotá, with a full cartographic layout.</p>
-                            <div class="pj-actions"><a class="pj-btn" href="#" data-gallery="assets/img/projects/ndvi.jpg|NDVI analysis — Bogotá"><i class="fas fa-map me-1"></i>View map</a></div>
                         </div>
                     </article>
                 </div>
