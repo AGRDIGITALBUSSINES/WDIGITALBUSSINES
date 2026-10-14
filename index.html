@@ -68,6 +68,37 @@
       .tool-card .tool-tech{font-size:.8rem;color:#00b4d8;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.75rem;}
       .tool-card p{flex:1;font-size:.95rem;line-height:1.55;color:#495057;}
       .tool-card a{font-weight:700;text-decoration:none;}
+      /* Portfolio grid */
+      .pj-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:-1.5rem 0 2rem}
+      .pj-chip{border:1px solid #cfd8e0;background:#fff;color:#1b2b3c;border-radius:20px;padding:6px 16px;font:600 .85rem Montserrat,sans-serif;cursor:pointer;transition:all .2s}
+      .pj-chip:hover{border-color:#00b4d8}
+      .pj-chip.active{background:#00b4d8;border-color:#00b4d8;color:#fff}
+      .pj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+      .pj-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.07);display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+      .pj-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(0,0,0,.12)}
+      .pj-card.pj-feat{grid-column:span 1}
+      .pj-thumb{aspect-ratio:4/3;background:#1b2b3c;overflow:hidden}
+      .pj-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+      .pj-body{padding:1.1rem 1.25rem 1.25rem;display:flex;flex-direction:column;flex:1}
+      .pj-tag{font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#00b4d8;margin-bottom:.3rem}
+      .pj-body h4{font-family:Montserrat,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.4rem}
+      .pj-body p{font-size:.92rem;line-height:1.55;color:#495057;flex:1;margin-bottom:.9rem}
+      .pj-actions{display:flex;flex-wrap:wrap;gap:8px}
+      .pj-btn{font:600 .8rem Montserrat,sans-serif;color:#1b2b3c;background:#eef6f9;border-radius:6px;padding:7px 12px;text-decoration:none;transition:background .2s}
+      .pj-btn:hover{background:#00b4d8;color:#fff}
+      .pj-card.hide{display:none}
+      @media (min-width:992px){.pj-grid{grid-template-columns:repeat(6,1fr)}.pj-card{grid-column:span 2}.pj-card.pj-feat{grid-column:span 3}.pj-card.pj-feat .pj-thumb{aspect-ratio:16/9}}
+      @media (min-width:992px){.pj-grid.filtered .pj-card{grid-column:span 2}.pj-grid.filtered .pj-card .pj-thumb{aspect-ratio:4/3}}
+      @media (max-width:991px){.pj-grid{grid-template-columns:repeat(2,1fr)}}
+      @media (max-width:575px){.pj-grid{grid-template-columns:1fr}}
+      .pj-modal{position:fixed;inset:0;background:rgba(10,18,26,.94);z-index:2000;display:none;align-items:center;justify-content:center;padding:56px 16px}
+      .pj-modal.open{display:flex}
+      .pj-stage{max-width:1200px;width:100%;display:flex;justify-content:center}
+      .pj-stage img,.pj-stage video{max-width:100%;max-height:78vh;border-radius:8px;background:#000}
+      .pj-close{position:absolute;top:10px;right:16px;font-size:2.4rem;line-height:1;color:#fff;background:none;border:0;cursor:pointer}
+      .pj-nav{position:absolute;top:50%;transform:translateY(-50%);font-size:3rem;color:#fff;background:none;border:0;cursor:pointer;padding:0 12px;opacity:.8}
+      .pj-prev{left:4px}.pj-next{right:4px}
+      .pj-caption{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#cfe3ee;font:600 .9rem Montserrat,sans-serif}
       .lang-switch{font-size:.85rem;opacity:.8;}
     </style>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -211,204 +242,123 @@
         
         <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="portfolio">
-            <div class="container shadow">
+            <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Selected work — click a 3D model to open it in the IFC viewer</h3>
+                    <h3 class="section-subheading text-muted">Selected work — open the 3D models, videos and maps</h3>
                 </div>
-                
-                <!-- Portfolio carousel -->
-                <div class="portfolio-carousel-wrapper">
-                    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
-                        
-                        <!-- Slides -->
-                        <div class="carousel-inner">
-                            <!-- Slide 1 -->
-                            <div class="carousel-item active">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card">
-                                            <a href="#portfolioModal1" data-bs-toggle="modal">
-                                                <img src="assets/img/portfolio/1.jpg" alt="GIS geoprocessing" />
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>GIS</h5>
-                                                <p>ArcGIS &amp; QGIS geoprocessing</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card">
-                                            <a href="#portfolioModal5" data-bs-toggle="modal">
-                                                <img src="assets/img/portfolio/5.jpg" alt="Site plan drawing" />
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>SITE PLAN</h5>
-                                                <p>AutoCAD &amp; Civil 3D</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 2 -->
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card">
-                                            <div class="carousel-card-iframe">
-                                                <iframe 
-                                                    data-src="https://app.powerbi.com/view?r=eyJrIjoiOGE3NDRhZjYtMDNmNS00NDQ4LThkMzctYjFiYzI0ODUyNTA5IiwidCI6IjE2YjQ4NGIzLTQ2YzgtNDQ3YS1iMWFhLWFhMTYzNWYyY2I2YiJ9" 
-                                                    frameborder="0" 
-                                                    allowFullScreen="true"
-                                                    loading="lazy">
-                                                </iframe>
-                                            </div>
-                                            <div class="carousel-card-caption">
-                                                <h5>DATA ANALYTICS</h5>
-                                                <p>Power BI Dashboard</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card">
-                                            <a href="https://www.youtube.com/watch?v=W2S6_7KCKmU" target="_blank">
-                                                <img src="https://img.youtube.com/vi/W2S6_7KCKmU/maxresdefault.jpg" alt="Dynamo" />
-                                                <div class="play-overlay"><i class="fas fa-play"></i></div>
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>DYNAMO</h5>
-                                                <p>Civil 3D automation</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 3 -->
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card">
-                                            <a href="https://www.youtube.com/watch?v=Ib81ZiSZojA" target="_blank">
-                                                <img src="https://img.youtube.com/vi/Ib81ZiSZojA/maxresdefault.jpg" alt="Python" />
-                                                <div class="play-overlay"><i class="fas fa-play"></i></div>
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>PYTHON</h5>
-                                                <p>AutoCAD automation</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card">
-                                            <a href="https://www.youtube.com/watch?v=ZPh4pBBsDqs" target="_blank">
-                                                <img src="https://img.youtube.com/vi/ZPh4pBBsDqs/maxresdefault.jpg" alt="GIS" />
-                                                <div class="play-overlay"><i class="fas fa-play"></i></div>
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>DYNAMO + GIS</h5>
-                                                <p>BIM-GIS integration</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 4 -->
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card model-card">
-                                            <a href="viewer.html?name=BOX%20BRIDGE&cx=0.8&cy=0.2&cz=0.8#Models/PUENTE-BOX.ifc" target="_blank">
-                                                <iframe 
-                                                    data-src="viewer.html?embed=true&name=BOX%20BRIDGE&cx=0.8&cy=0.2&cz=0.8#Models/PUENTE-BOX.ifc"
-                                                    loading="lazy">
-                                                </iframe>
-                                                <div class="model-overlay-btn"><i class="fas fa-cube"></i> View 3D</div>
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>BOX BRIDGE</h5>
-                                                <p>Tekla structural model · IFC</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card model-card">
-                                            <a href="viewer.html?name=DRAINAGE%20NETWORK&cx=0.5&cy=0.9&cz=0.5#Models/RGT_AC_1_T0_MOD_HPAN_4102_ALL_Urbanismo.ifc" target="_blank">
-                                                <iframe 
-                                                    data-src="viewer.html?embed=true&name=DRAINAGE%20NETWORK&cx=0.5&cy=0.9&cz=0.5#Models/RGT_AC_1_T0_MOD_HPAN_4102_ALL_Urbanismo.ifc"
-                                                    loading="lazy">
-                                                </iframe>
-                                                <div class="model-overlay-btn"><i class="fas fa-cube"></i> View 3D</div>
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>DRAINAGE NETWORK</h5>
-                                                <p>Civil 3D model · IFC</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Slide 5 -->
-                            <div class="carousel-item">
-                                <div class="row justify-content-center">
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card model-card">
-                                            <a href="viewer.html?name=MULTIFAMILY%20HOUSING#Models/Construcci%C3%B3n2.ifc" target="_blank">
-                                                <iframe 
-                                                    data-src="viewer.html?embed=true&name=MULTIFAMILY%20HOUSING#Models/Construcci%C3%B3n2.ifc"
-                                                    loading="lazy">
-                                                </iframe>
-                                                <div class="model-overlay-btn"><i class="fas fa-cube"></i> View 3D</div>
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>MULTIFAMILY HOUSING</h5>
-                                                <p>Revit model · IFC</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 px-3">
-                                        <div class="carousel-card model-card">
-                                            <a href="viewer.html?name=WATER%20TREATMENT%20PLANT#Models/MAIC_PTAP1.ifc" target="_blank">
-                                                <iframe 
-                                                    data-src="viewer.html?embed=true&name=WATER%20TREATMENT%20PLANT#Models/MAIC_PTAP1.ifc"
-                                                    loading="lazy">
-                                                </iframe>
-                                                <div class="model-overlay-btn"><i class="fas fa-cube"></i> View 3D</div>
-                                            </a>
-                                            <div class="carousel-card-caption">
-                                                <h5>WATER TREATMENT PLANT</h5>
-                                                <p>Revit model · IFC</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="pj-filters" role="tablist">
+                    <button class="pj-chip active" data-filter="all">All</button>
+                    <button class="pj-chip" data-filter="infra">Infrastructure</button>
+                    <button class="pj-chip" data-filter="scan">Scan-to-BIM</button>
+                    <button class="pj-chip" data-filter="bimgis">BIM-GIS</button>
+                    <button class="pj-chip" data-filter="auto">Automation</button>
+                    <button class="pj-chip" data-filter="data">Data</button>
+                </div>
+                <div class="pj-grid">
+                    <article class="pj-card pj-feat" data-cat="infra bimgis">
+                        <div class="pj-thumb"><img src="assets/img/projects/corridor.jpg" alt="Urban road corridor — BIM + GIS" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">Civil 3D · Revit · IFC · ArcGIS</span>
+                            <h4>Urban road corridor — BIM + GIS</h4>
+                            <p>Capstone of a 136-hour BIM for Infrastructure program: GIS studies for a new urban road, then a federated model of the roadway, bridge, box culvert, sewer, water and street lighting.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="#" data-video="assets/video/bim-gis-corridor.mp4"><i class="fas fa-play me-1"></i>Watch BIM-GIS video</a><a class="pj-btn" href="#" data-gallery="assets/img/projects/gis-study.jpg|Study area &amp; affected lots,assets/img/projects/gis-hazard.jpg|Flood &amp; landslide hazard,assets/img/projects/gis-slope.jpg|Terrain slope analysis"><i class="fas fa-map me-1"></i>GIS studies</a></div>
                         </div>
-                        
-                        <!-- Navigation arrows -->
-                        <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
-                            <span class="carousel-arrow"><i class="fas fa-chevron-left"></i></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
-                            <span class="carousel-arrow"><i class="fas fa-chevron-right"></i></span>
-                        </button>
-                    </div>
-                    
-                    <!-- Dot indicators -->
-                    <div class="carousel-indicators-custom">
-                        <button class="dot active" data-bs-target="#portfolioCarousel" data-bs-slide-to="0"></button>
-                        <button class="dot" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"></button>
-                        <button class="dot" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"></button>
-                        <button class="dot" data-bs-target="#portfolioCarousel" data-bs-slide-to="3"></button>
-                        <button class="dot" data-bs-target="#portfolioCarousel" data-bs-slide-to="4"></button>
-                    </div>
+                    </article>
+                    <article class="pj-card pj-feat" data-cat="scan">
+                        <div class="pj-thumb"><img src="assets/img/projects/formwork-scan.jpg" alt="Formwork survey — Scan-to-BIM" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">WebODM · Reality capture</span>
+                            <h4>Formwork survey — Scan-to-BIM</h4>
+                            <p>Drone photogrammetry of a formwork assembly: 151 images, 2.9 M-point cloud, 0.3 cm ground sample distance. Explore the textured mesh in 3D.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="mesh.html"><i class="fas fa-cube me-1"></i>Open 3D model</a></div>
+                        </div>
+                    </article>
+                    <article class="pj-card" data-cat="bimgis">
+                        <div class="pj-thumb"><img src="assets/img/projects/cesium-city.jpg" alt="Building model in its city context" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">Cesium ion · BIM-GIS</span>
+                            <h4>Building model in its city context</h4>
+                            <p>Georeferenced BIM model placed on 3D city buildings and satellite imagery to study massing and street relationships in central Bogotá.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="https://ion.cesium.com/stories/viewer/?id=e2791ff5-e3dd-480f-9355-699ccb3b45ad" target="_blank" rel="noopener"><i class="fas fa-globe-americas me-1"></i>Open 3D story</a></div>
+                        </div>
+                    </article>
+                    <article class="pj-card" data-cat="infra">
+                        <div class="pj-thumb"><img src="assets/img/projects/bridge.jpg" alt="Box-girder bridge" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">Tekla Structures · IFC</span>
+                            <h4>Box-girder bridge</h4>
+                            <p>Complete structural model — piles, caps, piers, box girder and abutments — exported to IFC for coordination.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="viewer.html?name=BOX%20BRIDGE&cx=0.8&cy=0.35&cz=0.8#Models/PUENTE-BOX.ifc"><i class="fas fa-cube me-1"></i>Open 3D model</a></div>
+                        </div>
+                    </article>
+                    <article class="pj-card" data-cat="infra">
+                        <div class="pj-thumb"><img src="assets/img/projects/water-plant.jpg" alt="Water treatment plant" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">Revit · MEP · IFC</span>
+                            <h4>Water treatment plant</h4>
+                            <p>Process building, tanks, equipment and piping modeled in Revit with integrated MEP systems and clash coordination.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="viewer.html?name=WATER%20TREATMENT%20PLANT#Models/MAIC_PTAP1.ifc"><i class="fas fa-cube me-1"></i>Open 3D model</a></div>
+                        </div>
+                    </article>
+                    <article class="pj-card" data-cat="auto">
+                        <div class="pj-thumb"><img src="https://img.youtube.com/vi/W2S6_7KCKmU/hqdefault.jpg" alt="Civil 3D automation with Dynamo" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">Dynamo · Civil 3D</span>
+                            <h4>Civil 3D automation with Dynamo</h4>
+                            <p>Dynamo graph that batch-creates named and styled alignments from polylines in Civil 3D.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="https://www.youtube.com/watch?v=W2S6_7KCKmU" target="_blank" rel="noopener"><i class="fas fa-play me-1"></i>Watch video</a></div>
+                        </div>
+                    </article>
+                    <article class="pj-card" data-cat="auto">
+                        <div class="pj-thumb"><img src="https://img.youtube.com/vi/Ib81ZiSZojA/hqdefault.jpg" alt="AutoCAD automation with Python" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">Python · pyAutoCAD</span>
+                            <h4>AutoCAD automation with Python</h4>
+                            <p>Python scripts that generate layers, blocks and drawing content in AutoCAD automatically.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="https://www.youtube.com/watch?v=Ib81ZiSZojA" target="_blank" rel="noopener"><i class="fas fa-play me-1"></i>Watch video</a></div>
+                        </div>
+                    </article>
+                    <article class="pj-card" data-cat="auto bimgis">
+                        <div class="pj-thumb"><img src="https://img.youtube.com/vi/ZPh4pBBsDqs/hqdefault.jpg" alt="Dynamo + GIS integration" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">Dynamo · ArcGIS · Revit</span>
+                            <h4>Dynamo + GIS integration</h4>
+                            <p>Workflow that connects ArcGIS geospatial data with Revit models through Dynamo.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="https://www.youtube.com/watch?v=ZPh4pBBsDqs" target="_blank" rel="noopener"><i class="fas fa-play me-1"></i>Watch video</a></div>
+                        </div>
+                    </article>
+                    <article class="pj-card" data-cat="data">
+                        <div class="pj-thumb"><img src="assets/img/projects/powerbi.jpg" alt="Project dashboard" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">Power BI</span>
+                            <h4>Project dashboard</h4>
+                            <p>Interactive report with quantities, percentages and a map view for project monitoring.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="https://app.powerbi.com/view?r=eyJrIjoiOGE3NDRhZjYtMDNmNS00NDQ4LThkMzctYjFiYzI0ODUyNTA5IiwidCI6IjE2YjQ4NGIzLTQ2YzgtNDQ3YS1iMWFhLWFhMTYzNWYyY2I2YiJ9" target="_blank" rel="noopener"><i class="fas fa-chart-bar me-1"></i>Open dashboard</a></div>
+                        </div>
+                    </article>
+                    <article class="pj-card" data-cat="data bimgis">
+                        <div class="pj-thumb"><img src="assets/img/projects/ndvi.jpg" alt="NDVI analysis" loading="lazy" /></div>
+                        <div class="pj-body">
+                            <span class="pj-tag">ArcGIS · QGIS</span>
+                            <h4>NDVI vegetation analysis</h4>
+                            <p>Vegetation index mapped from satellite imagery for Bogotá, with a full cartographic layout.</p>
+                            <div class="pj-actions"><a class="pj-btn" href="#" data-gallery="assets/img/projects/ndvi.jpg|NDVI analysis — Bogotá"><i class="fas fa-map me-1"></i>View map</a></div>
+                        </div>
+                    </article>
                 </div>
                 <p class="text-center mt-4 lang-switch">¿Prefieres español? <a href="assets/img/portfolio/AGRDB_Brochure.pdf" download>Descarga el brochure de servicios (PDF)</a></p>
             </div>
         </section>
+        
+        <!-- Media lightbox -->
+        <div class="pj-modal" id="pjModal" aria-hidden="true">
+            <button class="pj-close" aria-label="Close">&times;</button>
+            <button class="pj-nav pj-prev" aria-label="Previous">&#8249;</button>
+            <div class="pj-stage"></div>
+            <button class="pj-nav pj-next" aria-label="Next">&#8250;</button>
+            <div class="pj-caption"></div>
+        </div>
         
         <!-- Open-source tools-->
         <section class="page-section" id="tools">
@@ -633,5 +583,25 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+        (function(){
+            var chips=document.querySelectorAll('.pj-chip'),grid=document.querySelector('.pj-grid');
+            chips.forEach(function(c){c.addEventListener('click',function(){
+                chips.forEach(function(x){x.classList.remove('active')});c.classList.add('active');
+                var f=c.dataset.filter;grid.classList.toggle('filtered',f!=='all');
+                grid.querySelectorAll('.pj-card').forEach(function(card){card.classList.toggle('hide',f!=='all'&&card.dataset.cat.split(' ').indexOf(f)<0)});
+            })});
+            var m=document.getElementById('pjModal'),stage=m.querySelector('.pj-stage'),cap=m.querySelector('.pj-caption'),prev=m.querySelector('.pj-prev'),next=m.querySelector('.pj-next'),items=[],i=0;
+            function show(){var it=items[i];stage.innerHTML=it.type==='video'?'<video src="'+it.src+'" controls autoplay loop muted playsinline></video>':'<img src="'+it.src+'" alt="">';cap.textContent=it.cap||'';prev.style.display=next.style.display=items.length>1?'block':'none';}
+            function open(list){items=list;i=0;show();m.classList.add('open');document.body.style.overflow='hidden';}
+            function close(){m.classList.remove('open');stage.innerHTML='';document.body.style.overflow='';}
+            document.querySelectorAll('[data-video]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();open([{type:'video',src:a.dataset.video,cap:'Federated road corridor model in ArcGIS'}])})});
+            document.querySelectorAll('[data-gallery]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();open(a.dataset.gallery.split(',').map(function(x){var p=x.split('|');return{type:'img',src:p[0],cap:p[1]}}))})});
+            m.querySelector('.pj-close').onclick=close;m.addEventListener('click',function(e){if(e.target===m)close()});
+            prev.onclick=function(){i=(i-1+items.length)%items.length;show()};next.onclick=function(){i=(i+1)%items.length;show()};
+            document.addEventListener('keydown',function(e){if(!m.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')prev.onclick();if(e.key==='ArrowRight')next.onclick();});
+        })();
+        </script>
+
     </body>
 </html>
